@@ -1,0 +1,8 @@
+setup.py
+ex51/__init__.py
+ex51/planisphere.py
+projectGothonTest.egg-info/PKG-INFO
+projectGothonTest.egg-info/SOURCES.txt
+projectGothonTest.egg-info/dependency_links.txt
+projectGothonTest.egg-info/requires.txt
+projectGothonTest.egg-info/top_level.txt

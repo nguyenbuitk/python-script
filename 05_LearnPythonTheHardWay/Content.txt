@@ -1,0 +1,35 @@
+ex1,2,3: Các dạng print
+ex4: Truyền tham số và dòng lệnh print
+ex5: Truyền tham số và dòng lệnh với print(f"")
+ex6: format() method
+ex7: format() method và lệnh print("."*10)
+ex8: format() method full
+ex9: một số dạng print chứa \n \t
+ex10: dạng print để in ra dấu ", '
+ex11: một số dạng print
+ex12: một số dạng print
+ex13: dạng truyền vào đối số
+ex14: lệnh prompt = '> ' và name = input(promt)
+ex15: truyền vào tham số và lệnh name = input("> ")
+ex16: truncate() method: erase file content
+ex17: copy data from file to another file
+ex18, ex19: truyền tham số vào hàm mà lượng tham số ban đầu không xác định
+ex20: một số thao tác với file
+ex21: truyền tham số vào hàm
+ex24: một số lệnh và hàm
+ex25: một số lệnh split(), sort(), pop()
+ex26: câu lệnh if
+ex27: phép toán logic
+ex29-31: câu if, else
+ex32: for loop, list
+ex33: while loop
+ex34-37: truy cập phần tử, rẽ nhánh, các ký hiệu: operator, escape, data type, keyword
+ex38: append(), join()
+ex39: dictionary and delete phần tử của dictionary
+ex40: class: ví dụ mẫu
+ex41: class: một số khái niệm
+ex42: class: quan hệ về is-a và has-a trong kế thừa
+ex43: class: thiết kế một số class
+ex44: class: override khi method lớp con trùng tên với lớp cha
+ex45: thiết kế một game trên terminal
+ex46: import ...

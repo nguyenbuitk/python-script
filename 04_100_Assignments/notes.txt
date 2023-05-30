@@ -1,0 +1,9 @@
+- Trong trường hợp dữ liệu đầu vào được cung cấp, bạn hãy chọn cách để người dùng nhập số vào.
+    Ex: tính giai thừa của một số cho trước
+
+- Trong trường hợp dữ liệu đầu vào được nhập vào chương trình thì nó nên được giả định là
+    được người dùng nhập vào.
+D 300
+D 300
+W 200
+D 100

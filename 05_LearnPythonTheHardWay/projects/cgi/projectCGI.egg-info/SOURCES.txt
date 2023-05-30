@@ -1,0 +1,7 @@
+setup.py
+cgi/__init__.py
+projectCGI.egg-info/PKG-INFO
+projectCGI.egg-info/SOURCES.txt
+projectCGI.egg-info/dependency_links.txt
+projectCGI.egg-info/requires.txt
+projectCGI.egg-info/top_level.txt

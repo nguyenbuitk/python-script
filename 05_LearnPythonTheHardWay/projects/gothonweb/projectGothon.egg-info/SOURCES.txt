@@ -1,0 +1,8 @@
+setup.py
+gothonweb/__init__.py
+gothonweb/planisphere.py
+projectGothon.egg-info/PKG-INFO
+projectGothon.egg-info/SOURCES.txt
+projectGothon.egg-info/dependency_links.txt
+projectGothon.egg-info/requires.txt
+projectGothon.egg-info/top_level.txt

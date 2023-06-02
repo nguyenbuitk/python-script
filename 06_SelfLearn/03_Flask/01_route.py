@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 # A decorator (@app.route()) used to tell the application which URL is associated function
 # url '/' (localhost:5000) associate with hello_world() function
-# / ~ localhost:5000 + / = localhost:5000/
-# /secondpage/ ~ localhost:5000 + /secondpage/ = localhost:5000/secondpage/
+# / <=> localhost:5000 + / = localhost:5000/
+# /secondpage/ <=> localhost:5000 + /secondpage/ = localhost:5000/secondpage/
 @app.route('/')
 def hello_world():
     return 'HELLO'

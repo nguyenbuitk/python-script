@@ -1,6 +1,8 @@
 import random
 import re
 import unicodedata
+ 
+# split each entry to 3 or 4 parts
 
 def read_vocabulary(filename):
   vocabulary = []
@@ -9,14 +11,19 @@ def read_vocabulary(filename):
       line = line.strip()
       if line:
         parts = line.split('(')
-        if len(parts) < 2 :
+        if len(parts) < 2 or parts[0] == "end":
           # print("not enough infor")
           continue
         else:
           english = parts[0].strip()
           phonetic = parts[1].split(')')[0].strip()
-          vietnamese = parts[1].split(')')[1].strip()
-          vocabulary.append((english,phonetic,vietnamese))
+          if '|' in parts[1].split(')')[1]:
+            vietnamese = parts[1].split(')')[1].split('|')[0].strip()
+            annotation = parts[1].split(')')[1].split('|')[1].strip()
+            vocabulary.append((english,phonetic,vietnamese,annotation))
+          else:
+            vietnamese = parts[1].split(')')[1].strip()
+            vocabulary.append((english,phonetic,vietnamese))
   return vocabulary
 
 def check_answer(question, answer, is_english):
@@ -29,7 +36,7 @@ def check_answer(question, answer, is_english):
 def print_vocabulary_list(vocabulary):
   print("English\tPornunciation\tTranslation")
   for word in vocabulary:
-    print(f"{word[0]}\t{word[1]}\t{word[2]}")
+    print(f"{word[0]}\t{word[1]}\t{word[2]}\t{word[3]}")
 
 def vocabulary_quiz(files):
   while True:

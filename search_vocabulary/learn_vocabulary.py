@@ -2,12 +2,15 @@ import random
 import re
 import unicodedata
  
-# split each entry to 3 or 4 parts
+# to do:
+#   vv print annotation
+#   check answer by vietnamese
 
 def read_vocabulary(filename):
   vocabulary = []
   with open(filename, 'r', encoding='utf-8') as file:
     for line in file:
+      # line example: vacant(adj - ˈveɪkənt)chỗ trống | the seat next to him was vacant
       line = line.strip()
       if line:
         parts = line.split('(')
@@ -15,11 +18,18 @@ def read_vocabulary(filename):
           # print("not enough infor")
           continue
         else:
+          # english = vacant
           english = parts[0].strip()
-          phonetic = parts[1].split(')')[0].strip()
-          if '|' in parts[1].split(')')[1]:
-            vietnamese = parts[1].split(')')[1].split('|')[0].strip()
-            annotation = parts[1].split(')')[1].split('|')[1].strip()
+          
+          # part_two = (adj - ˈveɪkənt, chỗ trống | the seat next to him was vacant)
+          part_two = parts[1].split(')')
+          phonetic = part_two[0].strip()
+
+          if '|' in part_two[1]:
+            # part_three = chỗ trống, the seat next to him was vacant
+            part_three = part_two[1].split('|')
+            vietnamese = part_three[0].strip()
+            annotation = part_three[1].strip()
             vocabulary.append((english,phonetic,vietnamese,annotation))
           else:
             vietnamese = parts[1].split(')')[1].strip()
@@ -34,9 +44,11 @@ def check_answer(question, answer, is_english):
         return answer == question[0]
 
 def print_vocabulary_list(vocabulary):
-  print("English\tPornunciation\tTranslation")
-  for word in vocabulary:
-    print(f"{word[0]}\t{word[1]}\t{word[2]}\t{word[3]}")
+  print("English\tPronunciation\tTranslation\tAnnotate")
+  for line in vocabulary:
+    for word in line:
+      print(word, end='\t')
+    print('')
 
 def vocabulary_quiz(files):
   while True:
@@ -56,17 +68,31 @@ def vocabulary_quiz(files):
     is_english = input("Choose the language (English or Vietnamese): ").strip().lower() == 'english'
     
     print("Dịch từ tiếng Anh sang tiếng Việt:" if is_english else "Translate from English to Vietnamese:")
+    
+    wrong_answers = []
+    count = 0
+
     while vocabulary:
       question = random.choice(vocabulary)
-      print(question[0] if is_english else question[2], end=": ")
+      print(f"[{count}] {question[0] if is_english else question[2]}", end=': ')
+      count+=1
 
       user_answer = input()
       # print("user input ", user_answer)
       if check_answer(question, user_answer, is_english):
           # print("Correct! Next question.\n")
+          if len(question) == 4:
+            print("  example:", question[3])
           vocabulary.remove(question)
       else:
+          wrong_answers.append(question)
           print(f"Wrong! The correct answer is: {question[2] if is_english else question[0]}\n")
+          if len(question) == 4:
+            print("  example: ", question[3])
+
+    if wrong_answers:
+      print("\nList wrong word:")
+      print_vocabulary_list(wrong_answers)
 
     continue_quiz = input("Do you want to continue (yes/no)? ")
     if continue_quiz.lower() != 'yes':

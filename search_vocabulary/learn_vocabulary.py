@@ -1,10 +1,11 @@
 import random
 import re
 import unicodedata
- 
+# answer 'n' for skip 
 # to do:
 #   vv print annotation
-#   check answer by vietnamese
+#   vv check answer by vietnamese
+#   key event stroke when answer?
 
 def read_vocabulary(filename):
   vocabulary = []
@@ -65,30 +66,36 @@ def vocabulary_quiz(files):
     vocabulary = read_vocabulary(selected_file)
     
     # print_vocabulary_list(vocabulary)
-    is_english = input("Choose the language (English or Vietnamese): ").strip().lower() == 'english'
+    # is_english == 1 <=> hiển thị tiếng anh, trả lời bằng tiếng việt
+    is_english = input("Choose the language is displayed (English or Vietnamese): ").strip().lower() == 'english'
     
     print("Dịch từ tiếng Anh sang tiếng Việt:" if is_english else "Translate from English to Vietnamese:")
     
     wrong_answers = []
     count = 0
 
+    # browse through each voca in list voca
     while vocabulary:
       question = random.choice(vocabulary)
-      print(f"[{count}] {question[0] if is_english else question[2]}", end=': ')
+      if is_english:
+        print(f"[{count}] {question[0]} ({question[1]})", end=': ')
+      else:
+        print(f"[{count}] {question[2]}", end=': ')
       count+=1
 
       user_answer = input()
-      # print("user input ", user_answer)
-      if check_answer(question, user_answer, is_english):
-          # print("Correct! Next question.\n")
+      # Whether answer correct or not
+      if check_answer(question, user_answer, is_english) or user_answer == 'n':
+          if (user_answer == 'n'):
+            print(question[2])
           if len(question) == 4:
             print("  example:", question[3])
-          vocabulary.remove(question)
       else:
           wrong_answers.append(question)
-          print(f"Wrong! The correct answer is: {question[2] if is_english else question[0]}\n")
+          print(f"Wrong! The correct answer is: {question[2] if is_english else question[0]}")
           if len(question) == 4:
             print("  example: ", question[3])
+      vocabulary.remove(question)
 
     if wrong_answers:
       print("\nList wrong word:")
@@ -99,5 +106,5 @@ def vocabulary_quiz(files):
         break
 
 if __name__ == '__main__':
-    files = ['Voca_01.txt', 'Voca_02.txt']  # Thay thế danh sách tệp của bạn tại đây
+    files = ['Voca_01.txt', 'Voca_02.txt', 'voca_35.txt']  # Thay thế danh sách tệp của bạn tại đây
     vocabulary_quiz(files)

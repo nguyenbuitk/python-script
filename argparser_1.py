@@ -13,6 +13,7 @@ def main():
     # Parse arguments
     args = parser.parse_args()
     print(args)
+    
     # Logic based on the arguments
     if args.start:
         print("Starting the service...")

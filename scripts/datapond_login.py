@@ -23,16 +23,3 @@ if response.status_code == 200:
     print("Login successful")
 else:
     print("Login failed")
-
-# # Print status code and raw response
-# print("Status Code:", response.status_code)
-# print("Raw Response:", response.text)
-
-# # Try to parse JSON if Content-Type is application/json
-# if response.headers.get('Content-Type') == 'application/json':
-#     try:
-#         print("JSON Response:", response.json())
-#     except json.JSONDecodeError:
-#         print("The response is not in JSON format.")
-# else:
-#     print("Response is not JSON. Raw response:", response.text)

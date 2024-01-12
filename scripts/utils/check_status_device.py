@@ -78,8 +78,20 @@ def main():
     dp.login()
 
     # Query testing
-    stackstorm_settings = dp.find_all("Global", {"name": "StackstormSettings"})
+    get_tenant = dp.find_all("Tenant", {"ovInstanceId":"725477ab-b88c-4c54-8ec5-83a405488308"})
     
+    stackstorm_settings = dp.find_one("Global", {"name": "StackstormSettings"})["value"]
+    pprint(stackstorm_settings)
+    tenant_configs = {
+        "environment": env,
+        "system_support": credentials["Tov"]["system-support"], # username and password of user support
+        "stackstorm_settings": stackstorm_settings
+    }
 
+    Tenant.init_class(tenant_configs)
+    # query data (e.g. the whole Device table) from datapond may take long time,
+    # you may want to write the data from DP to a file to use later
+
+    print('Querying data from {}.'.format(datapond_url))
 if __name__ == "__main__":
     main()

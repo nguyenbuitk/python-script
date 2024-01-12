@@ -59,3 +59,8 @@ Use this documentation as a guide for constructing your queries and customizing 
 ---
 
 This `README.md` provides a clear, step-by-step guide on how to use the `find_all` method. It's sectioned into steps for ease of reading, and the use of code blocks helps separate the code from the explanatory text.
+
+### Another example
+{{ROOT_URL}}/classes/Tenant?where={"ovInstanceId":"725477ab-b88c-4c54-8ec5-83a405488308"}
+
+get_tenant = dp.find_all("Tenant", {"ovInstanceId":"725477ab-b88c-4c54-8ec5-83a405488308"})

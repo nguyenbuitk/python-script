@@ -16,6 +16,7 @@ def index():
     # step 4: login successful and app authorized
 @app.route('/authorize')
 def authorize():
+    print("URL: ", request.url)
     # step 5: code return
     code = request.args.get('code')
     headers = {'Accept' : 'application/json'}
@@ -41,6 +42,6 @@ def authorize():
     print(list_of_repos)
 
     return '<br>'.join(list_of_repos)
-    
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -18,7 +18,7 @@ message = "##### List of unused volumes ##### \n"
 
 for volume in unused_volumes:
     print(volume)
-    message = message + volume["VolumeId"] + "\n"
+    message = message + "VolumeID: {}".format(volume["VolumeId"]) + "\n"
     print("----------"*5)
 
 response = sns_client.publish(

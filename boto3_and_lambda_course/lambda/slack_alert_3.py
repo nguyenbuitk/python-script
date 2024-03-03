@@ -1,7 +1,8 @@
 import requests
 import json
+import os
 
-slack_web_hook = "https://hooks.slack.com/services/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"
+slack_web_hook = os.environ['SLACK_WEBHOOK']
 
 def send_slack(event, context):
     print(str(event))

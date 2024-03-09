@@ -10,7 +10,9 @@
 9. Find unused volume of ec2 and send email
 10. When json file uploaded to s3, automatically process and input file to dynamoDB
 11. Read CSV from S3 and persist to dynamoDB
-
+12. AWS Lambda - Run EC2 instances In Schedule
+13. Remove Unused AMIs
+14. AWS Lambda, send email notification when EC2 stopped
 # Notes 
 ## For using lambda, you can zip below file and upload to lambda function
 Notes:

@@ -1,0 +1,21 @@
+# New by emails
+
+This folder contains three Python files:
+
+## news_by_email
+
+This file fetches news articles related to a specific topic using the NewsAPI. It then constructs an email message containing the titles, descriptions, and URLs of the top 20 articles, and sends it using the `send_mail` function from `send_mail.py`.
+
+## send_mail.py
+
+This file contains a function `send_mail` that sends an email message using SMTP protocol. It requires a Gmail account's credentials for authentication.
+
+## nasa_api.py
+
+This file downloads and displays the Astronomy Picture of the Day (APOD) from NASA's API using Streamlit. It fetches the image URL and explanation from the API, downloads the image, and displays it along with its title and explanation using Streamlit.
+
+To run these scripts, make sure to install the required dependencies:
+- `requests`
+- `streamlit`
+
+You can install them using pip:

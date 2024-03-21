@@ -1,6 +1,31 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
+from flask_sqlalchemy import SQLAlchemy
+from flask_mail import Mail, Message
+from datetime import datetime
+
+
 
 app = Flask(__name__)
+
+app.config["SECRET_KEY"] = "myapplication123"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///datadd.db"
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 465
+app.config["MAIL_USE_SSL"] = True
+app.config["MAIL_USERNAME"] = "buinguyen23112k@gmail.com"
+app.config["MAIL_PASSWORD"] = "xivsnaecgqkgctpj"
+
+db = SQLAlchemy(app)
+mail = Mail(app)
+
+class Form(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(80))
+    last_name = db.Column(db.String(80))
+    email = db.Column(db.String(80))
+    date = db.Column(db.Date)
+    occupation = db.Column(db.String(80))
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -9,8 +34,24 @@ def index():
         last_name = request.form["last_name"]
         email = request.form["email"]
         date = request.form["date"]
+        dateObj = datetime.strptime(date, "%Y-%m-%d")
         occupation = request.form["occupation"]
-        
+
+        form = Form(first_name=first_name, last_name=last_name, email=email, date=dateObj, occupation=occupation)
+        db.session.add(form)
+        db.session.commit()
+
+        message_body = f"Thank you for your submissin, {first_name}"
+        message = Message(subject="New form submitssion",
+                          sender=app.config["MAIL_USERNAME"],
+                          recipients=[email],
+                          body=message_body)
+        mail.send(message=message)
+        flash("Your form was submitted successfully", "success")
     return render_template("index.html")
 
-app.run(debug=True, port=5000)
+
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+        app.run(debug=True, port=5000)

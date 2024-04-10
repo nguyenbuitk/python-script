@@ -1,0 +1,7 @@
+ Building web applications with Python, using Flask and Django frameworks. Flask is recommended for smaller apps, while Django is better for larger applications. The instructor suggests learning both frameworks for comprehensive understanding. The upcoming app with Flask involves a simple web form for job applications. Users can submit their details, and upon successful submission, receive a notification and an email. Employers can also view the submitted data.
+
+ Scripts in this folder include some feature like
+ - sending email with flask_email
+ - web platform with flask
+ - database with sqlalchemy
+ - jinja2 template in html, and how python interact with html code

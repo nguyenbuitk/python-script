@@ -2,3 +2,5 @@ scripts/cfg/
 scripts/certs/
 scripts/dao/__pycache__/
 scripts/lib/__pycache__/
+**/env/
+

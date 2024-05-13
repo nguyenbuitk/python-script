@@ -23,17 +23,18 @@ for filename in file_names:
             negativity.append(scores["neg"])
             date = file_path.strip(".txt").strip("diary/")
             dates.append(date)
+
 print(dates)
 print(negativity)
 print(positivity)
+
 st.title("Diary Tone")
 st.subheader("Positivity")
-pos_figure = px.line(x=dates, y=positivity,
-                     labels={"x": "Date", "y": "Positivity"})
+
+pos_figure = px.line(x=dates, y=positivity, labels={"x": "Date", "y": "Positivity"})
 st.plotly_chart(pos_figure)
 
 st.subheader("Negativity")
-neg_figure = px.line(x=dates, y=negativity,
-                     labels={"x": "Date", "y": "Negativity"})
+neg_figure = px.line(x=dates, y=negativity, labels={"x": "Date", "y": "Negativity"})
 st.plotly_chart(neg_figure)
 

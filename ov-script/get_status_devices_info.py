@@ -123,7 +123,7 @@ def requestAPI(url, headers, data = None, method = 'GET'):
             count += 1
             sleep(5)
 
-def login(url, usernmae, password):
+def login(url, username, password):
     try:
         payload = json.dumps({
             "email": username,
@@ -155,10 +155,31 @@ def login(url, usernmae, password):
         print("Login failed: {}".format(exception))
         return False
 
+def get_msp(url):
+    try:
+        response = requestAPI(url + "/api/msps", headers=headers, method="GET")
+        response = response.json()
+        return response
+    except Exception as exception:
+        print("Get MSP failed: {}".format(exception))
+        return False
+
+def get_org(url, msp_id):
+    response = requestAPI(url + "api/msps/" + msp_id + "/organizations/summary", headers=headers, method="GET")
+    response = response.json()
+    print("orgs ",response)
+    return response
+
+def handle_msp(url, msp_id, msp_name, detail = False):
+    orgs = get_org(url, msp_id)
+    print(f"orgs: {org}")
+    print(f"type of orgs: {type(orgs)}")
+    # org_params =
+
 def main():
 
-    parse_argument()
-    cluster_name="prod-us"
+    args = parse_argument()
+    cluster_name = args.cluster
 
     url = None
     for cluster in clusters:
@@ -166,6 +187,46 @@ def main():
             url = cluster["url"]
             print("url: ", url)
             break
+    # url = [cluster["url"] for cluster in clusters if cluster["cluster"] == cluster_name][0]
+    now_str = "{}{:02d}{:02d}_{:02d}{:02d}{:02d}".format(now.year, now.month, now.day, now.hour, now.minute,        now.second)
+    output_filename = f"./output/number_devices_{cluster_name}_{now_str}.csv"
+
+    print(f"You are connecting to {url}!")
+    if args.username is None:
+        username = input("Please provide username: ")
+    else:
+        username = args.username
+
+    password = input("Please provide password: ")
+    # password = "123456x@X"
+    # password = "Lily0123x@X"
+
+    msp = args.msp
+    org = args.org
+    site = args.site
+    detail = args.detail
+
+    if not login(url, username, password):
+        print("Can not login")
+        return
+    print("trigger")
+    msp_data = get_msp(url)['data']
+    print(f"msp_data: {msp_data}")
+    print("##############################################")
+    print("##############################################")
+    print("##############################################")
+    print("##############################################")
+
+    # one msp: type of msp_data: <class 'dict'>
+        # msp_data = { 'createdAt': '2023-08-28T07:45:08.072Z', 'updatedAt': '2024-02-29T09:39:04.270Z', 'id': '64ec5084ecec4252c3de11fb', 'name': "OVNG-PT-TMA Thailand's MSP", 'is2FARequired': False }
+    # multiple msps: type of msp_data: <class 'list'>
+    print(f"type of msp_data: {type(msp_data)}")
+
+    if not msp and not org and not site:
+        print("just pass cluster infor in command line!")
+        msp_params = []
+        #for msp in msp_data:
+        #    msp
 
 if __name__ == "__main__":
     main()

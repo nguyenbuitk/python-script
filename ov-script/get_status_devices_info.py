@@ -1,3 +1,5 @@
+# Todo
+#   - Handle exception when login fail
 import requests
 import json
 from datetime import datetime
@@ -6,10 +8,9 @@ import concurrent.futures
 from time import sleep
 import argparse
 import pandas as pd
-
+from pprint import pprint 
 headers = {
-    'Content-Type': 'application/json'
-}
+    'Content-Type': 'application/json' }
 
 device_states = set()
 output = []
@@ -62,6 +63,14 @@ def parse_argument():
             action='store',
             metavar=('username'),
             help='The username of superadmin account')
+    
+    parser.add_argument(
+            '-p',
+            "--password",
+            dest='password',
+            action='store',
+            metavar=('password'),
+            help='The password of superadmin account')
 
     parser.add_argument(
             '-m',
@@ -159,22 +168,126 @@ def get_msp(url):
     try:
         response = requestAPI(url + "/api/msps", headers=headers, method="GET")
         response = response.json()
+        print("### response of get_msp ###")
+        pprint(response)
         return response
+        '''
+        reponse =
+        {'data': {'createdAt': '2023-08-28T07:45:08.072Z',
+          'id': '64ec5084ecec4252c3de11fb',
+          'is2FARequired': False,
+          'name': "OVNG-PT-TMA Thailand's MSP",
+          'updatedAt': '2024-02-29T09:39:04.270Z'},
+          'message': 'The MSP has been successfully fetched.',
+          'status': 200}
+          '''
     except Exception as exception:
         print("Get MSP failed: {}".format(exception))
         return False
+    
 
 def get_org(url, msp_id):
-    response = requestAPI(url + "api/msps/" + msp_id + "/organizations/summary", headers=headers, method="GET")
+    response = requestAPI(url + "/api/msps/" + msp_id + "/organizations/summary", headers=headers, method="GET")
     response = response.json()
-    print("orgs ",response)
+    print("### response of get_org ###")
+    pprint(response)
+    return response
+    # return response api, including headers, statuscode, ...
+    # => need to process this returned api
+    # example
+    '''
+    reponse = 
+    {'data': [{'countryCode': 'ES',
+           'createdAt': '2024-05-09T02:42:07.322Z',
+           'id': '663c37ff1072861ac0dbc662',
+           'totalSites': 1,
+           'updatedAt': '2024-05-09T02:42:07.322Z'},
+          {'countryCode': 'AT',
+           'createdAt': '2024-03-21T03:28:40.447Z',
+           'id': '65fba96851621000f0a70880',
+           'idleTimeout': 3600,
+           'imageUrl': '',
+           'updatedAt': '2024-03-21T03:28:40.447Z'},
+          {'countryCode': 'TH',
+           'createdAt': '2023-08-28T07:45:08.073Z',
+           'id': '64ec5084ecec42502cde11fc',
+           'idleTimeout': 3720,
+           'imageUrl': '0290045d-ecd0-4316-8ae7-9005d941e61d.jpg',
+           'totalDevices': 5,
+           'totalOrgUsers': 7,
+           'totalSites': 6,
+           'updatedAt': '2024-01-25T10:35:25.730Z'}
+           ]
+    'message': 'The organizations have been successfully fetched.',
+    'status': 200
+    }
+    '''
+
+def get_site(url, org_id):
+    response = requestAPI(url + "/api/organizations/" + org_id + "/summary", headers=headers, method="GET")
+    response = response.json()
+    return response
+
+def get_device_by_org(url, org_id):
+    response = requestAPI(url + "/api/organizations/" + org_id + "/sites/device", headers=headers, method="GET")
+    response = response.json()
+    return response
+
+def get_device_by_site(url, org_id, site_id):
+    response = requestAPI(url + "/api/organizations/" + org_id + "/sites/" + site_id + "/devices", headers, method="GET")
+    response = response.json()
     return response
 
 def handle_msp(url, msp_id, msp_name, detail = False):
+    print("##############################################")
+    print("#### handle_msp ##############################")
     orgs = get_org(url, msp_id)
-    print(f"orgs: {org}")
-    print(f"type of orgs: {type(orgs)}")
-    # org_params =
+    print("## ORGs ###")
+    pprint(f"type of orgs: {type(orgs)}")
+    # orgs['data'] is list of dict
+    ## processing responsed api of orgs
+    org_params = []
+    for org in orgs['data']:
+        url = url
+        msp_id = msp_id
+        msp_name = msp_name
+        org_id = org['id']
+        org_name = org['name']
+        detail = detail
+        
+        org_params.append((url, msp_id, msp_name, org_id, org_name, detail))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        for tmp in executor.map(lambda p: handle_org(*p), org_params):
+            pass
+    # print("## orgs_params ###")
+    # pprint(org_params)
+    '''
+    [('https://sqa-sca.manage.ovcirrus.com',
+    '64ec5084ecec4252c3de11fb',
+    "OVNG-PT-TMA Thailand's MSP",
+    '663c37ff1072861ac0dbc662',
+    'RAP ORG #20',
+    False),
+    ('https://sqa-sca.manage.ovcirrus.com',
+    '64ec5084ecec4252c3de11fb',
+    "OVNG-PT-TMA Thailand's MSP",
+    '65fba96851621000f0a70880',
+    'AAA',
+    False),]
+    '''
+
+def handle_org(url, msp_id, msp_name, org_id, org_name, detail = False):
+    sites = get_site(url, org_id)
+
+    site_params = [(url, msp_id, msp_name, org_id, org_name, site['id'], site['name'], detail) for site in sites['data']['sites']]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        for o in executor.map(lambda p: handle_site(*p), site_params):
+            if o:
+                output.append(o)
+
+    return True
+
+
 
 def main():
 
@@ -196,11 +309,10 @@ def main():
         username = input("Please provide username: ")
     else:
         username = args.username
-
-    password = input("Please provide password: ")
     # password = "123456x@X"
     # password = "Lily0123x@X"
 
+    password = args.password
     msp = args.msp
     org = args.org
     site = args.site
@@ -211,22 +323,38 @@ def main():
         return
     print("trigger")
     msp_data = get_msp(url)['data']
-    print(f"msp_data: {msp_data}")
-    print("##############################################")
-    print("##############################################")
-    print("##############################################")
-    print("##############################################")
-
-    # one msp: type of msp_data: <class 'dict'>
-        # msp_data = { 'createdAt': '2023-08-28T07:45:08.072Z', 'updatedAt': '2024-02-29T09:39:04.270Z', 'id': '64ec5084ecec4252c3de11fb', 'name': "OVNG-PT-TMA Thailand's MSP", 'is2FARequired': False }
+    ''' 
+    one msp: type of msp_data: <class 'dict'>
+        msp_data = { 'createdAt': '2023-08-28T07:45:08.072Z', 'updatedAt': '2024-02-29T09:39:04.270Z', 'id': '64ec5084ecec4252c3de11fb', 'name': "OVNG-PT-TMA Thailand's MSP", 'is2FARequired': False }
     # multiple msps: type of msp_data: <class 'list'>
-    print(f"type of msp_data: {type(msp_data)}")
+    '''
+    # print(f"msp_data: {msp_data}")
+    # print(f"type of msp_data: {type(msp_data)}")
 
     if not msp and not org and not site:
         print("just pass cluster infor in command line!")
         msp_params = []
-        #for msp in msp_data:
-        #    msp
+        if isinstance(msp_data, dict):
+            url = url
+            id = msp_data['id']
+            name = msp_data['name']
+            detail = detail
+            msp_params.append((url, id, name, detail))
+            with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+                for tmp in executor.map(lambda p: handle_msp(*p), msp_params):
+                    pass
+        elif isinstance(msp_data, list):
+            for msp in msp_data:
+                url = url
+                id = msp['id']
+                name = msp['name']
+                detail = detail
+                msp_params.append((url, id, name, detail))
+        print("##############################################")
+        print("##############################################")
+        # msp_params  [('https://sqa-sca.manage.ovcirrus.com', '64ec5084ecec4252c3de11fb', "OVNG-PT-TMA Thailand's MSP", False)]
+        # print("msp_params ", msp_params)
+        
 
 if __name__ == "__main__":
     main()

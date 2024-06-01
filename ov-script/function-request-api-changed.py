@@ -25,8 +25,8 @@ def main():
     url = 'https://sqa-sca.manage.ovcirrus.com/api/user/signin'
     headers = {'Content-Type': 'application/json'}
     data = json.dumps({
-        'email': 'abc',
-        'password': 'xyz'
+        'email': 'osdfsd',
+        'password': '123sdf'
         })
     try:
         response = requestAPI(url, headers, data, "POST")

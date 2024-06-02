@@ -42,7 +42,9 @@ def parse_argument():
     """
 
     usage = 'Description: Get the device status in cluster'
-    parser = argparse.ArgumentParser(description=usage, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser = argparse.ArgumentParser(description=usage, 
+                                    epilog="Example usage: python3 get_status_devices_info.py -c sqa-4k -u ovsqatest+1@gmail.com -p real-password",
+                                    formatter_class=argparse.RawDescriptionHelpFormatter)
 
     # The choices parameter restricts the argument values to a specific set of valid options. If the user provides a value not in this list, argparse will raise an error.
     # The dest parameter sets the name of the attribute under which the argument value will be stored in the Namespace object returned by parse_args().
@@ -372,7 +374,88 @@ def handle_site(url, msp_id, msp_name, org_id, org_name, site_id, site_name, det
             log += ", list serial number device: {}".format(", ".join(o[state]['data']))
 
     print(log)
+    print("################## o ################")
+    print(o)
     return o
+
+def write_to_file(output_filename, detail = False):
+    print('Writing to {}...'.format(output_filename))
+
+    with open(output_filename, 'w') as file_object:
+        if not detail:
+            output_writer = csv.writer(file_object)
+            output_writer.writerow([
+                'MSP ID',
+                'MSP Name',
+                'Org ID',
+                'Org Name',
+                'Site ID',
+                'Site Name'
+            ] + list(device_states)
+            )
+
+            for o in output:
+                number_devices = []
+                for state in device_states:
+                    number_device = o[state]['number'] if state in o else 0
+                    number_devices.append(number_device)
+
+                output_writer.writerow(
+                    [
+                        o['msp_id'],
+                        o['msp_name'],
+                        o['org_id'],
+                        o['org_name'],
+                        o['site_id'],
+                        o['site_name']
+                    ] + list(number_devices)
+                )
+        else:
+            output_writer = csv.writer(file_object)
+            output_writer.writerow([
+                'MSP ID',
+                'MSP Name',
+                'Org ID',
+                'Org Name',
+                'Site ID',
+                'Site Name',
+                'Serial Number',
+                'Status',
+                'Number with same status'
+            ]
+            )
+            for o in output:
+                for state in device_states:
+                    if not state in o:
+                        continue
+
+                    for device in o[state]['data']:
+                        output_writer.writerow(
+                        [
+                            o['msp_id'],
+                            o['msp_name'],
+                            o['org_id'],
+                            o['org_name'],
+                            o['site_id'],
+                            o['site_name'],
+                            device,
+                            state,
+                             o[state]['number']
+                        ]
+                    )
+        print("done!")    
+
+def print_total_device():
+    print("- Device by state: ")
+    sum = 0
+    for state in device_states:
+        sum_state = 0
+        for o in output:
+            sum_state += o[state]['number'] if state in o else 0
+        print("  + {}: {}".format(state, sum_state))
+        sum += sum_state
+    print(" - Sum: {}".format(sum))
+
 def main():
 
     args = parse_argument()
@@ -437,6 +520,7 @@ def main():
         # msp_params  [('https://sqa-sca.manage.ovcirrus.com', '64ec5084ecec4252c3de11fb', "OVNG-PT-TMA Thailand's MSP", False)]
         # print("msp_params ", msp_params)
         
-
+        write_to_file(output_filename, detail)
+        print_total_device()
 if __name__ == "__main__":
     main()

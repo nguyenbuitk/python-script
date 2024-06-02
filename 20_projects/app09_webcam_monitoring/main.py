@@ -31,7 +31,7 @@ while True:
     gray_frame_gau = cv2.GaussianBlur(gray_frame, (19, 19), 0)
     if first_frame is None:
         first_frame = gray_frame_gau
-    
+
     # Calculates the absolute difference between the initial background frame (first_frame) and the current frame (gray_frame_gau).
     delta_frame = cv2.absdiff(first_frame, gray_frame_gau)
     # Pixels with differences về cường độ above a certain threshold (60 in this case) are set to white (255), and those below the threshold are set to black (0).
@@ -55,7 +55,7 @@ while True:
         rectangle = cv2.rectangle(frame, (x,y), (x+w, y+h), (0, 255, 0), 1)
         if rectangle.any():
             status = 1
-        
+
     status_list.append(status)
     status_list = status_list[-2:]
     if status_list[0] == 1 and status_list[1] == 0:

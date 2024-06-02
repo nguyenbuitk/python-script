@@ -4,19 +4,17 @@ from datetime import datetime
 
 def get_ssl_expiry_date(hostname):
     """Get the SSL certificate's expiry date for the given hostname."""
-    # Define the port for SSL
     port = 443
-
-    # Create a default SSL context
     context = ssl.create_default_context()
 
-    # Create a socket and wrap it with SSL
-    with socket.create_connection((hostname, port)) as sock:
-        with context.wrap_socket(sock, server_hostname=hostname) as ssock:
-            # Get the certificate
-            cert = ssock.getpeercert()
+    try:
+        with socket.create_connection((hostname, port), timeout=10) as sock:
+            with context.wrap_socket(sock, server_hostname=hostname) as ssock:
+                cert = ssock.getpeercert()
+    except Exception as e:
+        print(f"Could not connect to {hostname}: {e}")
+        return None
 
-    # Extract the expiry date from the certificate
     expiry_date_str = cert['notAfter']
     expiry_date = datetime.strptime(expiry_date_str, '%b %d %H:%M:%S %Y %Z')
 
@@ -25,12 +23,13 @@ def get_ssl_expiry_date(hostname):
 def check_ssl_expiry(hostname):
     """Check if the SSL certificate for the given hostname is expired or near expiry."""
     expiry_date = get_ssl_expiry_date(hostname)
-    current_date = datetime.utcnow()
+    if not expiry_date:
+        return
 
-    # Calculate the difference in days
+    current_date = datetime.utcnow()
     days_to_expiry = (expiry_date - current_date).days
 
-    print(f"Hostname: {hostname}")
+    print(f"\nHostname: {hostname}")
     print(f"SSL Certificate Expiry Date: {expiry_date}")
     print(f"Days until expiry: {days_to_expiry}")
 
@@ -41,8 +40,18 @@ def check_ssl_expiry(hostname):
     else:
         print("The SSL certificate is valid.")
 
+def main():
+    # List of domains to check
+    domains = [
+        'www.google.com',
+        'www.example.com',
+        'www.github.com',
+        'www.nonexistentdomain.tld'  # This will demonstrate error handling
+    ]
+
+    for domain in domains:
+        check_ssl_expiry(domain)
+
 if __name__ == "__main__":
-    # Example usage
-    hostname = input("Enter the hostname (e.g., www.google.com): ")
-    check_ssl_expiry(hostname)
+    main()
 

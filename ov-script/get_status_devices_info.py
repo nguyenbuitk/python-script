@@ -1,5 +1,6 @@
 # Todo
 #   - Handle exception when login fail
+#   - Handle exceptione when timeout?
 import requests
 import json
 from datetime import datetime
@@ -113,24 +114,20 @@ def parse_argument():
         exit(1)
 
     return args
-def requestAPI(url, headers, data = None, method = 'GET'):
-    while(True):
-        count = 0
+def requestAPI(url, headers, data=None, method='GET', timeout=15, max_retries=3, retry_interval=5):
+    for attempt in range(max_retries):
         try:
-            if data:
-                response = requests.request(method, url, headers=headers, data=data, timeout=15)
-            else:
-                response = requests.request(method, url, headers=headers, timeout=15)
-
-            if response.status_code == 200:
-                return response
-            else:
-                raise Exception(response)
-        except Exception as exception:
-            if count >= 15:
-                raise exception
-            count += 1
-            sleep(5)
+            response = requests.request(method, url, headers=headers, data=data, timeout=timeout)
+            response.raise_for_status()  # Raise an exception for 4XX/5XX status codes
+            return response
+        except requests.exceptions.Timeout:
+            print(f"Timeout occurred. Retrying... ({attempt + 1}/{max_retries})")
+        except requests.exceptions.RequestException as e:
+            print(f"Request failed: {e}")
+            if attempt == max_retries - 1:
+                raise e
+        sleep(retry_interval)
+    return None
 
 def login(url, username, password):
     try:
@@ -165,11 +162,12 @@ def login(url, username, password):
         return False
 
 def get_msp(url):
+    print("#################### get_msp ####################")
     try:
         response = requestAPI(url + "/api/msps", headers=headers, method="GET")
         response = response.json()
-        print("### response of get_msp ###")
-        pprint(response)
+        # print("### response of get_msp ###")
+        # pprint(response)
         return response
         '''
         reponse =
@@ -187,10 +185,11 @@ def get_msp(url):
     
 
 def get_org(url, msp_id):
+    # print("#################### get_org ####################")
     response = requestAPI(url + "/api/msps/" + msp_id + "/organizations/summary", headers=headers, method="GET")
     response = response.json()
-    print("### response of get_org ###")
-    pprint(response)
+    # print("### response of get_org ###")
+    #       pprint(response)
     return response
     # return response api, including headers, statuscode, ...
     # => need to process this returned api
@@ -224,7 +223,8 @@ def get_org(url, msp_id):
     '''
 
 def get_site(url, org_id):
-    response = requestAPI(url + "/api/organizations/" + org_id + "/summary", headers=headers, method="GET")
+    # print("#################### get_site ####################")
+    response = requestAPI(url + "/api/organizations/" + org_id + "/sites", headers=headers, method="GET")
     response = response.json()
     return response
 
@@ -239,11 +239,11 @@ def get_device_by_site(url, org_id, site_id):
     return response
 
 def handle_msp(url, msp_id, msp_name, detail = False):
-    print("##############################################")
-    print("#### handle_msp ##############################")
+    # print("##############################################")
+    # print("#### handle_msp ##############################")
     orgs = get_org(url, msp_id)
-    print("## ORGs ###")
-    pprint(f"type of orgs: {type(orgs)}")
+    # print("## orgs ###")
+    # pprint("{orgs}")
     # orgs['data'] is list of dict
     ## processing responsed api of orgs
     org_params = []
@@ -254,8 +254,8 @@ def handle_msp(url, msp_id, msp_name, detail = False):
         org_id = org['id']
         org_name = org['name']
         detail = detail
-        
         org_params.append((url, msp_id, msp_name, org_id, org_name, detail))
+        
     with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
         for tmp in executor.map(lambda p: handle_org(*p), org_params):
             pass
@@ -277,9 +277,23 @@ def handle_msp(url, msp_id, msp_name, detail = False):
     '''
 
 def handle_org(url, msp_id, msp_name, org_id, org_name, detail = False):
+    # print("##############################################")
+    # print("#### handle_org ##############################")
     sites = get_site(url, org_id)
 
-    site_params = [(url, msp_id, msp_name, org_id, org_name, site['id'], site['name'], detail) for site in sites['data']['sites']]
+    site_params = [(url, msp_id, msp_name, org_id, org_name, site['id'], site['name'], detail) for site in sites['data']]
+    # print("## site_params ###")
+    # pprint(site_params)
+    '''
+    [('https://sqa-sca.manage.ovcirrus.com',
+    '64ec5084ecec4252c3de11fb',
+    "OVNG-PT-TMA Thailand's MSP",
+    '6516d1f8233996c5b7b208bf',
+    'new-org-10.4-restoring',
+    '6516d1f823399681c8b208c3',
+    'Unnamed site',
+    False)]
+    '''
     with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
         for o in executor.map(lambda p: handle_site(*p), site_params):
             if o:
@@ -287,8 +301,78 @@ def handle_org(url, msp_id, msp_name, org_id, org_name, detail = False):
 
     return True
 
+def handle_site(url, msp_id, msp_name, org_id, org_name, site_id, site_name, detail = False):
+    # print("##############################################")
+    # print("#### handle_site ##############################")
+    # site_devices: responsed api 
+    # site_devices_data: actual data
+    # device_states: list device states
+    # state: iterates over each unique device state
+    # devices_device_state: list device in current state
+    # number_devices_device_state: len list device have same state
 
+    site_devices = get_device_by_site(url, org_id, site_id)
+    # print("## site_device ###")
+    # pprint(site_devices)
+    '''
+    {'data': [{'_insertedTS': None,
+            'serialNumber': 'AP199851',
+            },
+            {'_insertedTS': None,
+            'serialNumber': '111111111111AA',},
+            {'_insertedTS': None,
+            'serialNumber': 'AAAAAAAAA',
+            'site': {'id': '65b1e3b57a03a0ec03f85f56', 'name': 'ANH'}
+            'workMode': '',
+            'workingMode': None}],
+            'message': 'Devices have been successfully fetched.',
+            'status': 200}
+        '''
+    if not 'data' in site_devices:
+        print(site_devices)
+        
+    # Retrieves the actual devices data.
+    site_devices_data = site_devices['data']
+    
+    if not site_devices_data:
+        return None
+    
+    for device in site_devices_data:
+        # print("### device ###")
+        # print(device)
+        '''
+        {'id': '65f8fcc9492bb0ae03078715', 'name': 'AP-1E:20', 'deviceStatus': 'waitingForFirstContact', 'ipAddress': '172.16.101.63', 'ipAddressV6': '', 'friendlyName': '172.16.101.63 (AP-1E:20)', 'state': 'active'}
+        '''
+        device_states.add(device['deviceStatus'] if 'deviceStatus' in device else 'UNKOWN')
+    
+    o = {
+        "msp_id": msp_id,
+        "msp_name": msp_name,
+        "org_id": org_id,
+        "org_name": org_name,
+        "site_id": site_id,
+        "site_name": site_name
+    }
+    
+    log = "- MSP id {} - msp name {} - org id {} - org name {} - site id {} - site name: {}:".format(msp_id, msp_name, org_id, org_name, site_id, site_name)
+    
+    # Iterates over each unique device state.
+    # Filters devices that match the current state.
+    # Counts the number of devices in this state.
+    # Adds the count and serial numbers (or the device itself if serial number is not present) to the dictionary o.
+    for state in device_states:
+        devices_device_state = [device for device in site_devices_data if 'deviceStatus' in device and device['deviceStatus'] == state]
+        number_devices_device_state = len(devices_device_state)
+        o[state] = {}
+        o[state]['number'] = number_devices_device_state
+        o[state]['data'] = [device['serialNumber'] if 'serialNumber' in device else str(device) for device in devices_device_state]
 
+        log += "\n      + {}: {}".format(state, number_devices_device_state)
+        if detail and number_devices_device_state != 0:
+            log += ", list serial number device: {}".format(", ".join(o[state]['data']))
+
+    print(log)
+    return o
 def main():
 
     args = parse_argument()
@@ -309,9 +393,6 @@ def main():
         username = input("Please provide username: ")
     else:
         username = args.username
-    # password = "123456x@X"
-    # password = "Lily0123x@X"
-
     password = args.password
     msp = args.msp
     org = args.org
@@ -340,9 +421,7 @@ def main():
             name = msp_data['name']
             detail = detail
             msp_params.append((url, id, name, detail))
-            with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-                for tmp in executor.map(lambda p: handle_msp(*p), msp_params):
-                    pass
+
         elif isinstance(msp_data, list):
             for msp in msp_data:
                 url = url
@@ -350,8 +429,11 @@ def main():
                 name = msp['name']
                 detail = detail
                 msp_params.append((url, id, name, detail))
-        print("##############################################")
-        print("##############################################")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+            for tmp in executor.map(lambda p: handle_msp(*p), msp_params):
+                pass
+        # print("##############################################")
+        # print("##############################################")
         # msp_params  [('https://sqa-sca.manage.ovcirrus.com', '64ec5084ecec4252c3de11fb', "OVNG-PT-TMA Thailand's MSP", False)]
         # print("msp_params ", msp_params)
         

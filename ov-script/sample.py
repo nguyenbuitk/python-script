@@ -351,7 +351,7 @@ def main():
             id = msp['id']
             name = msp['name']
             detail = detail
-            msp_params.apeend((url, id, name, detail))
+            msp_params.append((url, id, name, detail))
         # msp_params = [(url, msp['id'], msp['name'], detail) for msp in msp_data]
         print("msp_params ", msp_params)
         with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:

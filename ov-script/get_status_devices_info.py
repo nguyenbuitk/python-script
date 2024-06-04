@@ -374,8 +374,8 @@ def handle_site(url, msp_id, msp_name, org_id, org_name, site_id, site_name, det
             log += ", list serial number device: {}".format(", ".join(o[state]['data']))
 
     print(log)
-    print("################## o ################")
-    print(o)
+    # print("################## o ################")
+    # print(o)
     return o
 
 def write_to_file(output_filename, detail = False):
@@ -456,6 +456,20 @@ def print_total_device():
         sum += sum_state
     print(" - Sum: {}".format(sum))
 
+def print_checklist(output_filename):
+    print('*********'*5)
+    df = pd.read_csv(output_filename)
+
+    df = df.sort_values('OV Managed',ascending=False)
+    df = df[['MSP Name','Org Name','Site Name','OV Managed']]
+
+    count_numberOrgDevice = (df['OV Managed'] != 0).sum()
+    print(f"Number of Org have Device: {count_numberOrgDevice}\n")
+
+    print("Top 5 Org has most devices")
+    print(df.head())
+
+
 def main():
 
     args = parse_argument()
@@ -496,7 +510,7 @@ def main():
     # print(f"type of msp_data: {type(msp_data)}")
 
     if not msp and not org and not site:
-        print("just pass cluster infor in command line!")
+        # print("just pass cluster infor in command line!")
         msp_params = []
         if isinstance(msp_data, dict):
             url = url

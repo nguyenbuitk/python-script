@@ -29,7 +29,7 @@ while True:
             number = number - 1
             todos = functions.get_todos()
             new_todo = input("Enter new todo: ")
-            todos[number] = new_todo + 'n'
+            todos[number] = new_todo + '\n'
             functions.write_todos(todos)
 
         except ValueError:
@@ -44,7 +44,7 @@ while True:
             todo_to_remove = todos[index].strip('\n')
             todos.pop(index)
             
-            function.write_todos(todos)
+            functions.write_todos(todos)
             message = f"Todo {todo_to_remove} was removed from the list."
             print(message)
         except IndexError:

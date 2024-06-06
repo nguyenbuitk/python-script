@@ -4,3 +4,4 @@ scripts/dao/__pycache__/
 scripts/lib/__pycache__/
 **/env/
 **/*.csv
+**/__pycache__/

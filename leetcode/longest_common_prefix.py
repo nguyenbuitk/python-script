@@ -25,7 +25,6 @@ class Solution(object):
             return ""
         return result[0]
 
-
 sol = Solution()
 print(sol.longestCommonPrefix(["flower", "flow","flight"]))
 print(sol.longestCommonPrefix(["dog","racecar","car"]))

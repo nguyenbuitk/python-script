@@ -1,15 +1,17 @@
+
 class Solution(object):
+    # (n) is number of strings in the list
+    # (m) is length of shortest string.
+    # Complexity: O(n * m) = O(n * m) + O(n)
     def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
+        
         if not strs:
             return ""
 
-        # Find the shortest string in the list
+        # O(n) Find the shortest string in the list
         min_str = min(strs, key=len)
 
+        # O(n * m) Comparing character
         for i in range(len(min_str)):
             for s in strs:
                 if s[i] != min_str[i]:
@@ -19,7 +21,7 @@ class Solution(object):
 
 def test_longestCommonPrefix():
     solution = Solution()
-
+    
     assert solution.longestCommonPrefix(["flower", "flow", "flight"]) == "fl"
 
     assert solution.longestCommonPrefix([""]) == ""

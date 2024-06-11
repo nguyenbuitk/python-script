@@ -1,4 +1,5 @@
 class Solution:
+    # Complexity O(n) Where n is the length of the input string s.
     def romanToInt(self, s: str) -> int:
         m = {
             'I': 1,

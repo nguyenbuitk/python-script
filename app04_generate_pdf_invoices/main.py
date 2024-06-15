@@ -18,8 +18,6 @@ for filepath in filepaths:
     pdf.set_font('Arial', 'B', 20)
     pdf.cell(40, 15, f"Date {date}", border=0, ln=1)
     
-
-    
     # Add a header
     # Retrieve the column name
     columns = df.columns
@@ -54,8 +52,6 @@ for filepath in filepaths:
     
     pdf.set_font(family="Times", size=10, style="B")
     pdf.cell(w=30, h=8, txt=f"The total price is {total_sum}", ln=1)
-    
-    
     
     pdf.ln()
     pdf.output(f"PDFs/{invoice_number}.pdf")

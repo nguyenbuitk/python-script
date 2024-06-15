@@ -1,0 +1,1 @@
+This script show how to read data from a CSV file and generate a PDF file where each row of the CSV becomes a header on a PDF page.cd 

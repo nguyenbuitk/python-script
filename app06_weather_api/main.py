@@ -25,18 +25,26 @@ def about(station, date):
 @app.route("/api/v1/<station>")
 def all_data(station):
     filename = "data_small/TG_STAID" + str(station).zfill(6) + ".txt"
-    df = pd.read_csv(filename, skiprows=20, parse_dates="    DATE")
-    temperatures = df.loc[df[' Q_TG'] == 0]['    TG'].squeeze() / 10
-    for item in df.iterrows:
-        
-    for temperature in temperatures:
-        return {"station": station,
-                "temperature": temperature}
-        
+    df = pd.read_csv(filename, skiprows=20, parse_dates=["    DATE"])
+    result = []
+    for index, row in df.iterrows():
+        result.append({"station": station,
+                       "date": row["    DATE"],
+                       "temperature": row['   TG']/10})
+    return result    
     
 @app.route("/api/v1/yearly/<station>/<year>")
 def yearly(station, year):
-    pass
-
+    filename = "data_small/TG_STAID" + str(station).zfill(6) + ".txt"
+    df = pd.read_csv(filename, skiprows=20, parse_dates=["    DATE"])
+    result = []
+    for index, row in df.iterrows():
+        print(type(row['    DATE'].year))
+        if row['    DATE'].year == int(year):
+            result.append(({"station": station,
+                            "date": row["    DATE"],
+                            "temperature": row['   TG']/10,
+                            "year": year}))
+    return result
 if __name__ == "__main__":
     app.run(debug=True)

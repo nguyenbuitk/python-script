@@ -1,0 +1,7 @@
+List Classes in this app:
+- User
+    + Can see list Hotel
+    + Can book Hotel
+    + Can get a reservation ticket
+- Hotel
+- Reservation Ticket

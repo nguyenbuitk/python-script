@@ -23,25 +23,20 @@ from typing import List
 
 class Solution:
     def canCross(self, stones: List[int]) -> bool:
-        setJump = {}
+        stone_positions = {stone: set() for stone in stones}
+        stone_positions[0].add(1)
         for stone in stones:
-            setJump[stone] = set()
-        print(setJump)
-        setJump[0].add(1)
-        for n, stone in enumerate(stones):
-            print("n = ", n)
-           
-            for jump in setJump[stone]:
-                print("jump = ", jump)
-                new_postition = stone + jump
-                if new_postition in stones:
+            for jump in stone_positions[stone]:
+                next_position = stone + jump
+                if next_position == stones[-1]:
+                    return True
+                
+                # if next_position in stones:           # complexity O(n)
+                if next_position in stone_positions:    # complexity O(1) 
                     if jump > 1:
-                        setJump[new_postition].add(jump-1)
-                    setJump[new_postition].update([jump, jump+1])
-            print(setJump)
-        if not setJump[stones[len(stones)-1]]:
-            return False
-        return True
+                        stone_positions[next_position].add(jump-1)
+                    stone_positions[next_position].update([jump, jump+1])
+        return False
         
 solution = Solution()
 print(solution.canCross([0,1,3,5,6]))

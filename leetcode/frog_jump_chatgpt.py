@@ -9,8 +9,6 @@ class Solution:
         stone_positions[stones[0]].add(1)
 
         for stone in stones:
-            print(f"{stone}======")
-            print(stone_positions)
             for jump in stone_positions[stone]:
                 next_position = stone + jump
                 if next_position == stones[-1]:

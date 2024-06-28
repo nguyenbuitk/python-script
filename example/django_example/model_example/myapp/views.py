@@ -5,5 +5,3 @@ from .models import Person
 def person_list_view(request):
     people = Person.objects.all()
     return render(request, 'person_list.html', {'people': people})
-
-

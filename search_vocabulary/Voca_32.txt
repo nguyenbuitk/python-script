@@ -40,7 +40,7 @@ manual(adj - ˈmænjuəl)làm bằng tay, thủ công|manual skills
 screenplay(n - ˈskriːnpleɪ)kịch bản phim|She won an Oscar for the movie’s screenplay.
 prospective(adj - prəˈspektɪv)tiềm năng, triển vọng|I had a phone call from a prospective client today.
 complex(n - ˈkɑːmpleks)khu phức hợp|a sports/leisure/shopping complex
-chief(n - tʃiːf)trưởng phòng, giám đốc
+chief(n - tʃiːf)trưởng phòng, giám đốc|Chief of Surgery 'trưởng phòng phẫu thuật
 rehearsal(n - rɪˈhɜːrsl)diễn tập
 accommodate(v - əˈkɑːmədeɪt)thích ứng|I needed to accommodate to the new schedule.
 venue(n - ˈvenjuː)địa điểm|entertainment venues
@@ -90,7 +90,6 @@ postage(n - ˈpəʊstɪdʒ)bưu phí| All prices include postage and packing.
 commentary(n - ˈkɑːmənteri)bài viết|a sports commentary
 affair(n - əˈfer)vấn đề|international affairs
 storeroom(n - ˈstɔːrʊm)nhà kho|Where’s the key to the storeroom?
-present(adj - ˈpreznt)trình bày, xuất trình, trao 'quà'
 shuttle(n - ˈʃʌtl)xe đưa đón|a shuttle service between London and Edinburgh
 barge(n - bɑːrdʒ)xà lan|They travel by barge.
 anchor(n - ˈæŋkər)neo

@@ -34,3 +34,19 @@ far too short: qúa ngắn
 good time: thời gian thuận lợi
 `Application process`: Quy trình đăng ký
 Please send a completed `application form` `addressed directly` to Carel: Vui lòng gửi `mẫu đơn đăng ký` đã điền đầy đủ và `gửi trực tiếp đến` Carel
+
+suitcase is being `stowed way`: ... cất đi
+canal: con kênh
+the product's bên discontinued: sản phẩm đã ngừng sản xuất
+misprinted: in sai
+Taking a site tour: đi tham quan 1 địa điểm
+How may I be of asssitance: t có thể giúp gì cho m?
+engagement: sự liên kết
+It'll be nice to be able to recognize ... : thật tuyệt khi có thể công nhận
+changing rooms: phòng thay đồ
+housekeeping: việc dọn phòng
+National History Society: hiệp hội lịch sử quốc gia
+an academic talk: nói chuyện học thuật
+itinerary: hành trình
+the listener will have some time off: người nghe sẽ có thời gian nghỉ ngơi
+you can make an informed decision `just in time` ... : m có thể đưa ra quyết định `đúng lúc vào` ...

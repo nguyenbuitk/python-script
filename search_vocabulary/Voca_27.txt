@@ -119,5 +119,5 @@ ray(n - reɪ):tia(tia chiếu)
 susceptible(adj - səˈseptəbl)nhạy cảm
 closure(n - ˈkləʊʒər)đóng, việc đóng cửa
 visualize(v - ˈvɪʒuəlaɪz)hình dung
-acknowledge(v - əkˈnɑːlɪdʒ)công nhận
+acknowledge(v - əkˈnɑːlɪdʒ)xác nhận, công nhận
 end(file)

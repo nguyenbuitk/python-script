@@ -4,6 +4,7 @@ Please remind `all staff memebers` that parking permits must be visible displaye
 A recent `journal article` indicates that `conducting on-the-job training` repeatedlly help to keep employee productive and alert: Một `bài báo` gần đây chỉ ra rằng việc thực hiện `đào tạo tại chỗ` giúp giữ cho nhân viên làm việc hiệu quả và tỉnh táo \
 With regret, ... : rất tiếc, ... \
 `In addition to` being promoted to division supervior, ... : `Ngoài việc` được thăng chức giám sát bộ phận \
+Guests enjoyed the resort’s new swimming pool `in addition to` its outdoor restaurant: các vị khách tận hưởng bể bơi, ngoài ra còn có nhà hàng ngoài trời
 Digital Digest Magazine `has awarded` its highest rating in technical performance to the Mobium 6 smart phone: Tạp chí Digital Digest `đã thưởng` đánh giá cao nhất của họ về hiệu suất kỹ thuật cho điện thoại mobium 6 \
 The CEO is reluctant to `slow down production`, ... : CEO bất đắc dĩ `sản xuất chậm lại` ... \
 Cooking `wider range of dishes`: nấu `nhiều món ăn hơn` \

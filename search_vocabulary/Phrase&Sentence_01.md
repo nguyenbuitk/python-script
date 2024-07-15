@@ -72,6 +72,12 @@ We `should be getting` | `will get` our dessert: chúng tôi sẽ có món trán
 I won't `make it` === `go` back to the office\
 from an early age: từ khi còn nhỏ\
 I'd like to `reschedule` my apPointment: t muốn dời lại cuộc hẹn
-`it appears that` when reconnecting it, he made some mistakes: `dường như khi` kết nối lại, ...
-whichever it maybe for you: bất kể điều đó có thể là gì đối với bạn
-all children `over` the age of 8 are welcome: ... `trên` 8 tuổi ...
+`it appears that` when reconnecting it, he made some mistakes: `dường như khi` kết nối lại, ... \
+whichever it maybe for you: bất kể điều đó có thể là gì đối với bạn \
+all children `over` the age of 8 are welcome: ... `trên` 8 tuổi  ... \ 
+try to work out `mutally acceptable terms and conditions`: làm việc để đưa ra `các điều khỏan và điều kiện chấp nhận được` cho cả 2 bên \
+I was quite surprised that you were requesting a salary
+increase `less than two months` after the date you signed the contract.: t khá bất ngờ rằng m đã yêu cầu một khoản tăng lương `chưa đầy 2 tháng` sau ngày kí hợp đồng \
+you `fail to` pay your account: m `không` thanh toán tài khoản \
+`as of the date` of this letter: `kể từ ngày` của lá thư này \
+probably won't arrive fro another four to five days: có lẽ không đến trong 4, 5 ngày tới \

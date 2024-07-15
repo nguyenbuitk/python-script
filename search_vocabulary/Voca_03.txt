@@ -44,7 +44,6 @@ complex:phuc' tap.
 bother:ban. tam
 brain:nao~
 perform:bieu? dien~
-likely:co' kha? nang
 speech:phat' bieu?
 frequatly:thuong` xuyen
 appropriate:thich' hop.

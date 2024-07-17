@@ -1,184 +1,121 @@
 ## Test 5th
-in case: phòng khi
-in case of: trong trường hợp
-outperform: vượt trội
-progressively: ngày càng
-in addition to: ngoài ra còn có/ngoài ra
-typically: thông thường
-slightly: nhẹ nhàng
-reside: cư trú
-residential: thuộc khu dân cư
-affiliate: liên kết
-occatinoal: thỉnh thoảng
-all of whom: tất cả những người mà
-barring: ngoại trừ
-enacted: ban hành
-engaged: tham gia |  They were engaged in conversation.
-nominate: đề cử
-subsidiary: công ty con
-spectator: khán giả
-turnover: doanh thu
-along: dọc theo
-stacked: xếp chồng lên nhau
-Bikes are propped against a railing: những chiếc xe đạp được chống vào lan can
-A menu is being handed to a customer: Một thực đơn đang được đưa cho khách hàng.
-One man has crossed his arms: Một người đàn ông đã khoanh tay.
-The table has been cleared of cups: Cái bàn đã được dọn sạch cốc chén.
-A piece of luggage is being unzipped: Một chiếc hành lý đang được mở khóa kéo.
-A man is buttoning up a dress shirt: Một người đàn ông đang cài cúc áo sơ mi.
-A potted plant is standing next to the closet: Một chậu cây đứng cạnh tủ quần áo.
-A man is twisting a belt into a coil: Một người đàn ông đang xoắn một chiếc thắt lưng thành vòng tròn.
-when is the press conference `going to get underway`:  cuộc họp báo tiến hành khi nào
-Isn't Alice transferring to the Orleans branch? alice không chuyển đến chi nhánh Orlean sao?
-it's unlikely: khả năng cao là không
-they're `getting raises`: được tăng lương
-blueprint: bản thiết kế
-It's located just past the courthouse: nó nằm ngay phía sau tòa án
-weren't customers notified about the increase in subscription rates: Khách hàng không được thông báo về mức tăng giá đăng ký sao?
-the new fashion line: dòng thời trang mới
-we've been selling them `for quite a while`: chúng tôi đã bán chúng được một khoảng thời gian rồi
-accumulation: sự tích lũy
-statements: báo cáo
-a picture I took: bức ảnh mà tôi chụp
-He is stepping down as head copywriter: rời vị trí trưởng copywritter
-a dedicated employee: nhân viên tận tâm
-excursion: chuyến tham quan
-conference room: phòng họp/hội nghị
-conference hall: hội trường
-I'm not supposed to ... : tôi không được phép ...
-I'm `in charge of` the company's safety department: t phụ trách phòng an toàn của công ty
-occupational: lao động
-quite a few: có khá nhiều
-precuationary: phòng ngừa
-our office is `running low on some supplies`: văn phòng chúng ta đang hết một số vật phẩm
-packs of folders:  bìa đựng tài liệu
-your order qualifies for the bulk rates: đơn hàng của m đủ điều kiện cho mức giá số lượng lớn
-It's essential that `everything be taken care` of before then: điều cần thiết là `mọi thứ phải được xử lý` trước đó
-light bulb: bóng đèn
-light emitting diode products: sản phẩm đi ốt phát sáng
-but i don't think it highlights our product's competative attributes enough: Nhưng t ko nghĩ nó highlight đủ các thuộc tính cạnh tranh của sản phẩm
-big tear: mảng rách lớn
-what a shame: thật đáng tiếc
-securely: chắc chắn
+in case + S + V () phòng khi/phòng trường hợp | in case it rains
+in case of + V () phòng khi/phòng trường hợp | in case of fire, use the stairs
+outperform () vượt trội | our new models outperforms all previous ones
+progressively (adv - prəˈɡresɪvli) ngày càng | prices have been rising progressively
+in addition to (prep - ɪn əˈdɪʃn tə) ngoài ra còn có/ngoài ra | in addition to his salary, he gets a bonus
+typically (adv - ˈtɪpɪkli) thông thường | a typically busy day at the office
+slightly (adv - ˈslaɪtli) nhẹ nhàng | prices are slightly higher this year
+reside (v - rɪˈzaɪd) cư trú | they reside in a small village
+residential (adj - ˌrezɪˈdenʃl) thuộc khu dân cư | a residential area
+affiliate (v - əˈfɪliˌeɪt) liên kết | the university is affiliated with several research institutions
+occasional (adj - əˈkeɪʒənl) thỉnh thoảng | she makes occasional visits to New York
+barring (prep - ˈbɑːrɪŋ) ngoại trừ | barring any delays, we should arrive by 7 PM
+enacted (v - ɪˈnæktɪd) ban hành | the law was enacted last year
+engage in (phrase) tham gia | They were engaged in conversation.
+nominate (v - ˈnɒmɪneɪt) đề cử | she was nominated for an award
+subsidiary (n - səbˈsɪdiəri) công ty con | a subsidiary of the parent company
+spectator (n - ˈspektətər) khán giả | thousands of spectators watched the match
+turnover (n - ˈtɜːrnəʊvər) doanh thu | the company's turnover increased last year
+along (prep - əˈlɔːŋ) dọc theo | walk along the river
+stacked (adj - stækt) xếp chồng lên nhau | the boxes were stacked in the corner
+blueprint (n - ˈbluːˌprɪnt) bản thiết kế | we followed the blueprint carefully
+accumulation (n - əˌkjuːmjəˈleɪʃn) sự tích lũy | the accumulation of wealth
+statement (n - ˈsteɪtmənts) báo cáo | financial statements
+excursion (n - ɪkˈskɜːrʒn) chuyến tham quan | we went on an excursion
+conference room (n - ˈkɒnfərəns ruːm) phòng họp/hội nghị | the meeting is in the conference room
+conference hall (n - ˈkɒnfərəns hɔːl) hội trường | the event will be held in the conference hall
+occupational (adj - ˌɒkjuˈpeɪʃənl) lao động | occupational health and safety
+quite a few (phrase) có khá nhiều | quite a few people attended
+precautionary (adj - prɪˈkɔːʃənəri) phòng ngừa | precautionary measures
+light bulb (n - ˈlaɪt bʌlb) bóng đèn | the light bulb needs to be replaced
+big tear (phrase) mảng rách lớn | there's a big tear in the fabric
+what a shame (phrase) thật đáng tiếc | what a shame
 the product `brochure`: `tờ rơi`  giới thiệu sản phẩm
-draft: bản nháp
-fond: thích
-beforehand: trước đó
-Harris Kitchen is within the vicinty of the gallery: ... gần khu vực trưng bày?
-the time sheet: bảng chấm công
-how odd: lạ thật
-business trip: chuyến công tác
-later this afternoon: cuối buổi chiều nay
-be briefed: được thông báo
-I'm also gonna `bring up` ... : t cũng sẽ `đề cập` đến các bình luận một khách hàng gần đây đã chia sẻ
-aside: ngoài
-less-than-ideal: kém lý tưởng
-heading into: tiến vào
-heavy traffic: giao thông đông đúc
-northbound: hướng bắc
-elsewhere: ở nơi khách
-routine: định kỳ
-backups: ùn tắc
-commute: đi lại
-certificate course: khóa học được cấp chứng chỉ
-tax return: tờ khai thuế
-file (v): nộp
-state and fereral: tiểu bang và liên bang
-carry: cung cấp
-no matter: bất kể
-gear: thiết bị
-stock: kho
-litter: rác
-acquisition: việc mua lại
-deal: thỏa thuận
-consolidation: sự hợp nhất
-revenues are still down a bit `from earlier this year`: doanh thu vẫn giảm một chút `so với đầu năm nay`
-the charges `you made to your company credit` card in London last month: các khoản phí mà `m đã thực hiện đối với thẻ tín dụng công ty` ...
-the scans of the statements: scan của bản sao kê
-assignment: phân công, bài tập
-relocation: di dời
-rewards are available in exchange: những phần thưởng vẫn có sẵn để đổi
-special promotion: khuyến mãi đặc biệt
-regardless of: bất kể
-convey: chuyển giao
-consequently: do đó
-the following month: tháng tiếp theo
-redo: cải tạo
-city official close to selecting developers for downtown building: các quan chức thành phố gần chọn được các nhà phát triển cho tòa nhà trung tâm
-stipulated: đã quy định
-the firm left in the running: các hãng còn lại trong cuộc đua
-remodeling: cải tạo
-if all goes well: nếu mọi thứ suôn sẻ
-draw up an agreement: soạn thảo một thỏa thuận
-preceding: trước đó
-forthcoming: sắp tới
-compelling: hấp dẫn
-all of our communications: tất cả thông tin liên lạc
-with good gas mileage: mức tiêu thụ gas tốt
-dents: vết lõm
-cable news station: đài truyền hình cáp
-anchor: biên tập viên
-taking over: thay thiết
-headline: tiêu đề
-broadcast: chương trình phát sóng
-the head of CTT new: người đứng đầu của ...
-newcaster: biên tập viên
-a true investigate spirti: tinh thần điều tra thật sự
-an article of clothing: món quần áo
-dominaiton: khoản quyên góp
-gratefully: một cách biết ơn
-also arrange guided visits: sắp xếp các chuyến tham quan được hướng dẫn
-a flat fee: khoản phí cố định
-biographies: tiểu sử
-inhabitant: cư dân
-boutique: cửa hàng
-tins: thiếc
-proceeds: số tiền
-go toward: hướng tới việc
-crew leader: trưởng nhóm công nhân (trưởng nhóm)
-five-story structure: cấu trúc 5 tầng
-turn up at our location: đến
-nutritious: bổ dưỡng
-accompaiments: món ăn kèm
-cast and crew: diễn viên và đoàn làm vphim
-premiere: ra mắt
-signs listing assigned workspaces: biển liệt kê không gian làm việc được phân công
-freelace illustrator: họa sĩ minh họa tự do
-job application: đơn xin việc
-broken up into 12 different stories: chia thành 12 ...
-chief operation officer = chief operation = giám đốc điều hành
-pension scheme: hệ thống hưu trí
-communicate your preference: đưa ra ý kiến của bạn
-as well as: ngoài
-amount: số tiền
-if there is a time that `works` best for you: nếu có thời gian `phù hợp` với bạn
-deducted: được trừ
-the sum that workers can put toward a pension: số tiền mà các công nhân có thể đóng vào quỹ hưu trí
-the bonuses employees are given for performing well: tiền thưởng mà nhân viên ...
-an extension on the deadline: gia hạn deadline
-peer: đồng nghiệp
-stakeholders: các bên liên quan
-various sectors: nhiều ngành khác nhau
-material `profession`: `nghề` vật liệu
-advertisement meant for inclusion in :để đưa vào
-incidentally: nhân tiện
-his availability: khả năng có mặt của anh ấy ...
-with whom: với những người ...
-positive coverage in numerous publications: phản hổi tích cự trong nhiều ấn phẩm
-amenties: sự tiện nghi
-both of which: cả 2
-boardroom: phòng họp
-remark: phát biểu
-certificates of appreciation: giấy chứng nhận khen thưởng
-hand the card to you server: đưa thẻ cho người phục vụ
-it hosted a large numerous tourist: nó đón lượng lớn du Khách
-waterfront: ven sông
-establishment: nhà hàng
-recreation: giải trí
-considerable significance: có ý nghĩa đáng kể
-with the realm of possibility: trong phạm vi có thể
-vicnity: khu vực lân cận
-we can go over the Cross Media contract together: chúng ta có thể cùng xem hợp động Cross Media
-right across the street: ngay bên kia đường ...
-carry out: thực hiện
-concluding date: ngày kết thúc
+draft (n - dræft) bản nháp | this is just a draft
+fond (adj - fɑːnd) thích | she's very fond of chocolate
+beforehand (adv - bɪˈfɔːrhænd) trước đó | we should prepare everything beforehand
+business trip (n - ˈbɪznəs trɪp) chuyến công tác | he is on a business trip
+later this afternoon (phrase) cuối buổi chiều nay | let's meet later this afternoon
+be briefed (phrase) được thông báo | you will be briefed on the situation
+aside (adv - əˈsaɪd) ngoài | aside from that, everything is fine
+less-than-ideal (adj - lɛs-ðən-aɪˈdil) kém lý tưởng | the conditions were less-than-ideal
+heading into (v - ˈhɛdɪŋ ˈɪntu) tiến vào | we're heading into town
+heavy traffic (n - ˈhɛvi ˈtræfɪk) giao thông đông đúc | there is heavy traffic today
+northbound (adj - ˈnɔːrθbaʊnd) hướng bắc | the northbound train
+elsewhere (adv - ˈɛlsˌwɛr) ở nơi khác | the answer lies elsewhere
+routine (adj - ruːˈtiːn) định kỳ | routine maintenance
+backups (n - ˈbækˌʌps) ùn tắc | there are backups on the highway
+commute (v - kəˈmjuːt) đi lại | I commute to work by bus
+certificate course (n - sərˈtɪfɪkət kɔːrs) khóa học được cấp chứng chỉ | I completed a certificate course
+tax return (n - tæks rɪˈtɜːrn) tờ khai thuế | file your tax return
+file (v - faɪl) nộp | file your taxes
+state and federal (adj - steɪt ənd ˈfɛdərəl) tiểu bang và liên bang | state and federal regulations
+carry (v - ˈkæri) cung cấp | they carry a variety of products
+no matter (phrase - noʊ ˈmætər) bất kể | no matter what happens
+gear (n - ɡɪr) thiết bị | hiking 'đi bộ đường dài' gear
+stock (n - stɒk) kho | in stock
+litter (n - ˈlɪtər) rác | pick up litter
+acquisition (n - ˌækwɪˈzɪʃn) việc mua lại | the acquisition of a company
+deal (n - diːl) thỏa thuận | they made a deal
+consolidation (n - kənˌsɒlɪˈdeɪʃən) sự hợp nhất | consolidation of companies
+assignment (n - əˈsaɪnmənt) phân công, bài tập | your next assignment
+relocation (n - ˌriːləʊˈkeɪʃn) di dời | the relocation of the office
+special promotion (n - ˈspeʃəl prəˈmoʊʃən) khuyến mãi đặc biệt | a special promotion for new customers
+regardless of (prep - rɪˈɡɑːrdlɪs əv) bất kể | regardless of the weather
+convey (v - kənˈveɪ) chuyển/chuyển giao | please convey my thanks to him
+consequently (adv - ˈkɒnsɪkwəntli) do đó | he didn't like the work and consequently left the job
+the following month () tháng tiếp theo | the project will start the following month
+redo (v - ˌriːˈduː) cải tạo | we need to redo the kitchen
+stipulated (v - ˈstɪpjuleɪtɪd) đã quy định | the contract stipulated that the work be completed by the end of the year 'vào cuối năm
+remodeling (n - riːˈmɒdəlɪŋ) cải tạo | the remodeling of the office
+preceding (adj - prɪˈsiːdɪŋ) trước đó | the preceding year was very successful
+forthcoming (adj - ˈfɔːrθˌkʌmɪŋ) sắp tới | the forthcoming event
+compelling (adj - kəmˈpɛlɪŋ) hấp dẫn | a compelling story
+dent (n - dɛnts) vết lõm | the car has several dents
+cable news station (n - ˈkeɪbəl nuːz ˈsteɪʃən) đài truyền hình cáp | she works for a cable news station
+anchor (n - ˈæŋkər) biên tập viên 
+taking over (phrase) đảm nhận/thay thế | she is taking over his duties 'nhiệm vụ'
+headline (n - ˈhɛdlaɪn) tiêu đề | the headline of the article
+broadcast (n - ˈbrɔːdkæst) chương trình phát sóng | the news broadcast
+the head of CTT news (phrase) người đứng đầu của CTT news | the head of CTT news
+newscaster (n - ˈnuːzkæstər) biên tập viên | the newscaster
+a true investigative spirit (phrase) tinh thần điều tra thật sự 
+an article of clothing (phrase) món quần áo | he bought an article of clothing
+donation (n - doʊˈneɪʃən) khoản quyên góp | they made a donation to the charity
+gratefully (adv - ˈɡreɪtfəli) một cách biết ơn | she thanked him gratefully
+a flat fee (phrase) khoản phí cố định | the service is provided for a flat fee
+biography (n - baɪˈɑːɡrəfiz) tiểu sử | the book includes several biographies
+inhabitant (n - ɪnˈhæbɪtənt) cư dân | the city's inhabitants
+boutique (n - buːˈtik) cửa hàng | a clothing boutique
+tins (n - tɪnz) thiếc | a collection of old tins
+proceeds (n - ˈproʊsiːdz) số tiền thu được | the proceeds from the sale
+proceed (v - prəʊˈsiːd) tiếp tục | the work proceeding slowly
+go toward (phrase) hướng tới việc | the money will go toward building a new school
+nutritious (adj - nuːˈtrɪʃəs) bổ dưỡng | a nutritious meal
+accompaniments (n - əˈkʌmpənimənts) món ăn kèm | the dish is served with various accompaniments
+cast and crew (phrase) diễn viên và đoàn làm phim | the cast and crew were amazing
+premiere (n - prɪˈmɪr) ra mắt | the premiere of the new movie
+signs listing assigned workspaces (phrase) biển liệt kê không gian làm việc được phân công | signs listing assigned workspaces
+freelance illustrator (n - ˈfriːˌlæns ˈɪləˌstreɪtər) họa sĩ minh họa tự do | she works as a freelance illustrator
+pension scheme (n - ˈpɛnʃən skiːm) hệ thống hưu trí | the company offers a pension scheme
+amount (n - əˈmaʊnt) số tiền | the total amount
+deduct (v - dɪˈdʌkt) được trừ | the amount will be deducted from your pay
+peer (n - pɪər) đồng nghiệp | she is respected by her peers
+stakeholders (n - ˈsteɪkˌhoʊldərz) các bên liên quan | stakeholders in the project
+various sectors (phrase) nhiều ngành khác nhau | representatives from various sectors
+incidentally (adv - ˌɪnsɪˈdɛntəli) nhân tiện | incidentally, have you seen my keys?
+his availability (phrase) khả năng có mặt của anh ấy | let me know his availability
+with whom (phrase) với những người mà | the team with whom we will be working
+amenity (n - əˈmɛnɪti) sự tiện nghi | the hotel offers many amenities
+both of which (phrase) cả hai | both of which are important
+boardroom (n - ˈbɔːrdˌruːm) phòng họp | the meeting is in the boardroom
+remark (n - rɪˈmɑːrk) phát biểu | his remark was very insightful
+waterfront (n - ˈwɔːtərˌfrʌnt) ven sông | the hotel is on the waterfront
+establishment (n - ɪˈstæblɪʃmənt) nhà hàng | a fine dining establishment
+recreation (n - ˌriːkriˈeɪʃən) giải trí | recreation facilities
+realm (): lĩnh vực, phạm vi | it's within the realm of possibility
+vicinity (n - vəˈsɪnɪti) khu vực lân cận | the store is in the vicinity
+right across the street (phrase) ngay bên kia đường | the store is right across the street
+carry out (v - ˈkæri aʊt) thực hiện | they plan to carry out the work
+conclude (v) kết thúc, kết luận | the concluding date of the project, He concluded from their remarks

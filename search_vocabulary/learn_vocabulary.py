@@ -106,5 +106,5 @@ def vocabulary_quiz(files):
         break
 
 if __name__ == '__main__':
-    files = ['Voca_01.txt', 'Voca_02.txt', 'Voca_32.txt', 'Voca_33.txt', 'Voca_34.txt', 'Voca_35.txt', 'Voca_39.txt', 'Voca_35.txt']  # Thay thế danh sách tệp của bạn tại đây
+    files = ['Voca_01.txt', 'Voca_02.txt', 'Voca_32.txt', 'Voca_33.txt', 'Voca_34.txt', 'Voca_35.txt', 'Voca_39.txt']  # Thay thế danh sách tệp của bạn tại đây
     vocabulary_quiz(files)

@@ -1,6 +1,6 @@
-## Test 5th
+## Test 5th, 3
 in case + S + V () phòng khi/phòng trường hợp | in case it rains
-in case of + V () phòng khi/phòng trường hợp | in case of fire, use the stairs
+in case of + N () phòng khi/phòng trường hợp | in case of fire, use the stairs
 outperform () vượt trội | our new models outperforms all previous ones
 progressively (adv - prəˈɡresɪvli) ngày càng | prices have been rising progressively
 in addition to (prep - ɪn əˈdɪʃn tə) ngoài ra còn có/ngoài ra | in addition to his salary, he gets a bonus
@@ -45,7 +45,7 @@ heavy traffic (n - ˈhɛvi ˈtræfɪk) giao thông đông đúc | there is heavy
 northbound (adj - ˈnɔːrθbaʊnd) hướng bắc | the northbound train
 elsewhere (adv - ˈɛlsˌwɛr) ở nơi khác | the answer lies elsewhere
 routine (adj - ruːˈtiːn) định kỳ | routine maintenance
-backups (n - ˈbækˌʌps) ùn tắc | there are backups on the highway
+???backups (n - ˈbækˌʌps) ùn tắc | there are backups on the highway
 commute (v - kəˈmjuːt) đi lại | I commute to work by bus
 certificate course (n - sərˈtɪfɪkət kɔːrs) khóa học được cấp chứng chỉ | I completed a certificate course
 tax return (n - tæks rɪˈtɜːrn) tờ khai thuế | file your tax return
@@ -119,3 +119,18 @@ vicinity (n - vəˈsɪnɪti) khu vực lân cận | the store is in the vicinity
 right across the street (phrase) ngay bên kia đường | the store is right across the street
 carry out (v - ˈkæri aʊt) thực hiện | they plan to carry out the work
 conclude (v) kết thúc, kết luận | the concluding date of the project, He concluded from their remarks
+
+superior(n - suːˈpɪriər)cấp trên|The superior gave instructions to the team.
+occupant(n - ˈɑːkjəpənt)người thuê|The current occupant of the apartment has been living there for two years.
+memorable(adj - ˈmemərəbl)đáng nhớ|The vacation was memorable for its beautiful scenery.
+merchandise(n - ˈmɜːrtʃəndaɪs)hàng hóa|The store offers a wide variety of merchandise.
+a color scheme(n - ə ˈkʌlər skiːm)bảng màu|The designer chose a color scheme.
+a torn banner(n - ə tɔːrn ˈbænər)banner bị rách|The event had a torn banner at the entrance.
+establishment(n - ɪˈstæblɪʃmənt)cơ sở|The new establishment has quickly gained popularity.
+expressway(n - ɪkˈspresweɪ)đường cao tốc|The new expressway has reduced travel time significantly.
+proofread(v - ˈpruːfriːd)đọc|Please proofread the document before submission.
+an athletic association(æθˈletɪk)hiệp hội thể thao|The school has an  athletic association.
+textbook(n - ˈtekstbʊk)sách giáo khoa|The students need to buy a new textbook for the course.
+establishment(n - ɪˈstæblɪʃmənt)việc thành lập|The establishment of a new store was announced.
+discontinue(v - ˌdɪskənˈtɪnjuː)dừng|They decided to discontinue the old product line.
+transaction(n - trænˈzækʃn)giao dịch|The bank processed the transaction quickly.

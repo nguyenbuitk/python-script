@@ -1,5 +1,4 @@
 tough:khó khăn
-shortage:thiếu
 tube:ống
 heal:hồi phục
 penalty:phạt

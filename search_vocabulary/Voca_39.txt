@@ -21,7 +21,7 @@ along (prep - əˈlɔːŋ) dọc theo | walk along the river
 stacked (adj - stækt) xếp chồng lên nhau | the boxes were stacked in the corner
 blueprint (n - ˈbluːˌprɪnt) bản thiết kế | we followed the blueprint carefully
 accumulation (n - əˌkjuːmjəˈleɪʃn) sự tích lũy | the accumulation of wealth
-statement (n - ˈsteɪtmənts) báo cáo | financial statements
+statement (n - ˈsteɪtmənts) báo cáo, sao kê| financial statements
 excursion (n - ɪkˈskɜːrʒn) chuyến tham quan | we went on an excursion
 conference room (n - ˈkɒnfərəns ruːm) phòng họp/hội nghị | the meeting is in the conference room
 conference hall (n - ˈkɒnfərəns hɔːl) hội trường | the event will be held in the conference hall
@@ -54,7 +54,7 @@ state and federal (adj - steɪt ənd ˈfɛdərəl) tiểu bang và liên bang | 
 carry (v - ˈkæri) cung cấp | they carry a variety of products
 no matter (phrase - noʊ ˈmætər) bất kể | no matter what happens
 gear (n - ɡɪr) thiết bị | hiking 'đi bộ đường dài' gear
-stock (n - stɒk) kho | in stock
+stock (n - stɒk) kho, hàng hóa| in stock
 litter (n - ˈlɪtər) rác | pick up litter
 acquisition (n - ˌækwɪˈzɪʃn) việc mua lại | the acquisition of a company
 deal (n - diːl) thỏa thuận | they made a deal

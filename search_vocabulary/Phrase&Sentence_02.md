@@ -14,7 +14,6 @@ the reservation system: hệ thống đặt chỗ
 art and craft vendors: ng bán hàng/nha cung cấp đồ thủ công mỹ nghệ
 Hand in some paperwork: Nộp một số giấy tờ
 dietician /ˌdaɪəˈtɪʃn/: bác sỹ dinh dưỡng
-caterer /ˈkeɪtərər/: ng cung cấp thực phẩm
 demonstrate: giới thiệu
 A voice-controlled speaker: loa điều khiển bằng giọng nói
 A department merge: sát nhập bộ phận
@@ -26,7 +25,6 @@ An asumsement park: công viên giải trí
 utensil: dụng cụ
 Midwest Landscapers Showcase: triển lãm cảnh quan trung tây hằng năm
 building inspector: thanh tra xây dựng
-local caterer: nhà cung cấp thực phẩm địa phương
 tourist attraction: điểm thu hút khác du lịch
 make customers more aware of your business: khiến kh biết đến doanh nghiệp của b nhiều hơn
 conference organizing committee: ban tổ chức hội nghị

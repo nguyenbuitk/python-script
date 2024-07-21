@@ -24,7 +24,6 @@ breathe:tho?
 goal:muc. tieu
 though:mac. du`
 course:khoa' hoc.
-charge:tien` phi' ton'
 extreme:cuc.
 bit:mot. phan` nho?
 pole:cay sao`

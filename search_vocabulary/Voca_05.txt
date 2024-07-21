@@ -70,7 +70,7 @@ bet(v - bet)cược
 monk(n - mʌŋk)nhà sư
 trust(n - trʌst)lòng tin
 brave(adj - breɪv)can đảm
-load(n - ləʊd)tải
+load(v - ləʊd)chất, xếp, dỡ
 handle(n - ˈhændl)tay cầm
 steady(adj - ˈstedi)vững chắc, ổn định
 household(n - ˈhaʊshəʊld)hộ gia đình
@@ -78,7 +78,7 @@ disaster(n - dɪˈzæstər)thảm họa
 apparent(adj - əˈpærənt)hiện rõ, hiện hữu
 devote(v - dɪˈvəʊt)dùng, sử dụng
 hike(n - haɪk)đi bộ
-compose(v - kəmˈpəʊz)soạn
+compose(v - kəmˈpəʊz)soạn nhạc | music specially composed for the occasion
 freeze(v - friːz)làm lạnh, đóng băng
 thus(adv - ðʌs)do đó
 layer(n - ˈleɪər)lớp

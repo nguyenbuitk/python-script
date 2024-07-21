@@ -1,5 +1,5 @@
 ## test 6th, map vưới phrase_08
-05
+06
 form of identification (n - fɔːrm əv aɪˌdentɪfɪˈkeɪʃn) hình thức nhận dạng | please provide a valid form of identification
 unhelpful (adj - ʌnˈhelpfəl) vô ích | his comments were unhelpful
 credit (n - ˈkrɛdɪt) tín nhiệm | she has earned credit for her hard work
@@ -66,3 +66,6 @@ tour (v - tʊər) tham quan | they toured the city
 represent (v - ˌrɛprɪˈzɛnt) đại diện | she represents the company in negotiations 'trong đàm phán'
 funding (n - ˈfʌndɪŋ) kinh phí, nguồn tài trợ | it relies on advertisements for funding 'có kinh phí'
 advanced (adj - ədˈvænst) tiên tiến | working on advanced technology
+coat: áo khoác
+stairway: cầu thang
+noon: trưa

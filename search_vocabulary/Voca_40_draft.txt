@@ -1,5 +1,5 @@
 # từ đã học nhưng quên nghĩa
-03
+04
 referrals (n - rɪˈfɜːrəlz) giới thiệu | he got the job through referrals
 seasonal employee (n - ˈsiːzənl ɪmˈplɔɪi) nhân viên thời vụ | the store hires seasonal employees during the holidays
 taking inventory daily (phrase - ˈteɪkɪŋ ˈɪnvəntɔːri ˈdeɪli) kiểm kê hàng tồn kho hằng ngày | they are responsible for taking inventory daily
@@ -26,7 +26,6 @@ for over a decade (phrase - fɔr ˈoʊvər ə ˈdɛkeɪd) hơn 1 thập kỷ | t
 portray (v - pɔrˈtreɪ) mô tả | the book portrays the life of the artist
 receipt (n - rɪˈsiːt) biên nhận, biên lai | keep the receipt for your records
 uniquely placed (phrase - juˈnikli pleɪst) có vị trí độc đáo | the hotel is uniquely placed in the heart of the city
-practices (n - ˈpræktɪsɪz) hoạt động | the company's practices are under review
 prominent (adj - ˈprɑmɪnənt) nổi bật | she is a prominent figure 'nhân vật' in the community
 proportion (n - prəˈpɔːrʃn) tỷ lệ | a large proportion of the population 'dân số' is under 18
 put in an order () đặt hàng | they put in an order for new supplies
@@ -42,3 +41,5 @@ a storage closet (n - ə ˈstɔrɪʤ ˈklɑzɪt) kho quần áo | the storage cl
 I'll have a glass with breakfast () uống 1 ly nước với bữa sáng 
 inspector (n - ɪnˈspɛktər) thanh tra | the inspector visited the factory yesterday
 We're glad that you're considering us to meet the energy needs of your factory () cân nhắc chúng tôi để đáp ứng nhu cầu năng lượng nhà máy của bạn | we're glad that you're considering us to meet the energy needs of your factory
+supplementary: bổ sung
+whose: mà có | the house whose doors are painted red has been sold

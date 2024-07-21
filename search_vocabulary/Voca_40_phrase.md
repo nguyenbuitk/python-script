@@ -1,4 +1,5 @@
-I'm `leaning toward` Star Restaurant: `nghiên về phía` nhà hàng Star
+03
+I'm `leaning toward` Star Restaurant: `nghiêng về phía` nhà hàng Star
 the `least expensieve` lunch service: dịch vụ ăn trưa `rẻ nhất`
 the nineteenth-century painting gallery: phòng trưng bày tranh thế kỷ 19
 I'd better come back to do that: làm điều đó sau
@@ -20,4 +21,6 @@ landscape the park grounds: cải tạo khuôn viên công viên
 the account `from which` the funds are `withdrawn`: tài khoản `mà từ đó` tiền được rút ra
 our `advanced` manufacturing `procedures`: các `quy trình` sản xuất `tiên tiến` của chúng tôi
 bridge `crossing` the wading pod: cây cầu `bắc qua` hồ nước cạn
-the `critically acclaimed` oil painter Harold Bernstein (phrase - ðə ˈkrɪtɪkli əˈkleɪmd ɔɪl ˈpeɪntər ˈhæroʊld ˈbɜrnstiːn) họa sỹ tranh sơn dầu nổi tiếng `được giới phê bình đánh giá cao` 
+the `critically acclaimed` oil painter Harold Bernstein () họa sỹ tranh sơn dầu nổi tiếng `được giới phê bình đánh giá cao`
+All of the other accountants work in offices in this `hall`, too, `as do` the directors of the shows: tất cả các nhân viên kế toán làm việc ở `hội trường` này cũng như giám đốc của show
+tell customers what the company is all about () cho khách hàng biết tất cả về công ty

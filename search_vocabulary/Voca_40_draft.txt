@@ -1,7 +1,8 @@
+# từ đã học nhưng quên nghĩa
+03
 referrals (n - rɪˈfɜːrəlz) giới thiệu | he got the job through referrals
 seasonal employee (n - ˈsiːzənl ɪmˈplɔɪi) nhân viên thời vụ | the store hires seasonal employees during the holidays
-taking inventory daily (phrase - ˈteɪkɪŋ ˈɪnvəntɔːri ˈdeɪli) kiểm kê hằng ngày | they are responsible for taking inventory daily
-a dress rehearsal (n - ə drɛs rɪˈhɜːrsəl) buổi thử trang phục | the cast had a dress rehearsal before the show
+taking inventory daily (phrase - ˈteɪkɪŋ ˈɪnvəntɔːri ˈdeɪli) kiểm kê hàng tồn kho hằng ngày | they are responsible for taking inventory daily
 pick up a client (phrase - pɪk ʌp ə ˈklaɪənt) đón một khách hàng | he needs to pick up a client from the airport
 at a client presentation (phrase - æt ə ˈklaɪənt ˌprezənˈteɪʃən) buổi thuyết trình với khách hàng | she performed well at a client presentation
 office complex (n - ˈɔːfɪs ˈkɒmplɛks) khu/khu phức hợp văn phòng | the new office complex is very modern
@@ -19,7 +20,7 @@ prompt shipments (phrase - prɑmpt ˈʃɪpmənts) việc giao hàng nhanh chóng
 shortage (n - ˈʃɔːrtɪdʒ) sự thiếu hụt | there is a shortage of staff
 stock (n - stɒk) hàng hóa | the stock is kept in the warehouse
 primarily (adv - praɪˈmɛrəli) chủ yếu | the product is aimed primarily at young people
-charge (n - tʃɑrdʒ) khoản phí | there is a small charge for delivery
+charge (n - tʃɑrdʒ) việc tính phí, khoản phí | there is a small charge for delivery
 charge (v - tʃɑrdʒ) tính phí | they charge a fee for late payments
 for over a decade (phrase - fɔr ˈoʊvər ə ˈdɛkeɪd) hơn 1 thập kỷ | the company has been in business for over a decade
 portray (v - pɔrˈtreɪ) mô tả | the book portrays the life of the artist
@@ -34,12 +35,10 @@ dining room (n - ˈdaɪnɪŋ rum) phòng ăn | the dining room is elegantly deco
 the personnel office (phrase - ðə pərsəˈnɛl ˈɔfɪs) phòng nhân sự | please contact the personnel office for assistance
 a file drawer (n - ə faɪl drɔr) ngăn kéo tài liệu | she kept the documents in a file drawer
 a man is removing his jacket (phrase - ə mæn ɪz rɪˈmuːvɪŋ hɪz ˈdʒækɪt) đang cởi áo khoác | a man is removing his jacket in the hallway
-sweep a dock (phrase - swip ə dɑk) quét dọn | the workers sweep the dock every morning
+sweep a dock (phrase - swip ə dɑk) quét dọn bến tàu | the workers sweep the dock every morning
 putting up a metal barrier (phrase - ˈpʊtɪŋ ʌp ə ˈmɛtl ˈbæriər) dựng lên một rào chắn kim loại | they are putting up a metal barrier around the site
 where are new printers being made () máy in được sản xuất ở đâu | where are new printers being made?
 a storage closet (n - ə ˈstɔrɪʤ ˈklɑzɪt) kho quần áo | the storage closet is full
 I'll have a glass with breakfast () uống 1 ly nước với bữa sáng 
-All of the other accountants work in offices in this `hall`, too, `as do` the directors of the shows: hành lang ... cũng như ...
 inspector (n - ɪnˈspɛktər) thanh tra | the inspector visited the factory yesterday
 We're glad that you're considering us to meet the energy needs of your factory () cân nhắc chúng tôi để đáp ứng nhu cầu năng lượng nhà máy của bạn | we're glad that you're considering us to meet the energy needs of your factory
-tell customers what the company is all about () cho khách hàng biết tất cả về công ty | tell customers what the company is all about

@@ -210,8 +210,6 @@ quantity:số lượng
 quality:chất lượng
 qualify:đủ điều kiện
 
-admission:cho phép, tuyển sinh
-
 laundry:giặt ủi
 launch
 lounge

@@ -19,7 +19,6 @@ ingredient:thanh` phan`
 shelf:ke.
 mission:nhiem. vu.
 lightly:nhe.
-fund:quy~
 exhibit:trien? lam~
 ruins:tan` tich'
 blame:khien? trach'

@@ -1,4 +1,4 @@
-5
+7
 visitor, tourist, traveler (n - ˈvɪzɪtər): du khách | The museum was full of visitors today.
 regular (adj - ˈreɡjələr): thường xuyên,thông thường | He is a regular customer at this cafe.
 gripping (v - ˈɡrɪpɪŋ): nắm chặt | He is gripping a handrail.
@@ -27,7 +27,6 @@ realtor (n - ˈriəltər): môi giới bất động sản | The realtor helped 
 like-minded (adj - ˌlaɪkˈmaɪndɪd): có cùng chí hướng | The club attracts like-minded individuals.
 disclose (v - dɪsˈkloʊz): tiết lộ | He refused to disclose the details of the contract.
 lounge (n - laʊndʒ): phòng chờ | We waited in the lounge before our flight.
-in keeping with (phr - ɪn ˈkipɪŋ wɪð): tuân thủ | The new policies are in keeping with the company's goals.
 in excess of (phr - ɪn ɪkˈsɛs ʌv): vượt quá | The car was driving at speeds in excess of 100 mph.
 commodity (n - kəˈmɑdətiz): hàng hóa | The market deals 'buôn bán' in various agricultural commodities.
 work out (v - wɜrk aʊt): thảo luận | We need to work out the details of the plan.
@@ -79,3 +78,4 @@ interesting(adj - ˈɪntrəstɪŋ)thú vị|the book was very interesting
 concerning(prep - kənˈsɜːrnɪŋ)liên quan|she asked a question concerning the project
 others(n - ˈʌðərz)những người/cái khác|some students are here, but others are still on their way
 evident(adj - ˈevɪdənt)hiển nhiên|it is evident that she is very talented
+tailored(adj - ˈteɪlərd)thiết kế riêng|the suit was tailored perfectly

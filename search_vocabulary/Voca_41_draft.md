@@ -1,4 +1,4 @@
-1
+3
 mend(v - mend)sửa chữa|he mended the broken chair
 newsletter(n - ˈnjuːzˌletər)bản tin|the monthly newsletter was informative 'nhiều thông tin bổ ích'
 wonderfully(adv - ˈwʌndərfəli)tuyệt vời|the entire cast did wonderfully
@@ -8,26 +8,24 @@ Transit Authority(n - ˈtrænzɪt əˈθɔːrəti)cơ quan giao thông|the Trans
 peer evaluation(n - pɪr ɪˌvæljuˈeɪʃn)đánh giá đồng nghiệp|their peer evaluation was thorough 'kỹ lưỡng'
 perceive(v - pərˈsiːv)coi là|she is perceived as a leader
 express train(n - ɪkˈspres treɪn)tàu tốc hành|an express train to the city
-increase minimum wage drew criticism from union members(tăng mức lương tối thiểu thu hút sự chỉ trích từ thành viên công đoàn)
+increase minimum `wage` drew criticism from union members: tăng `mức lương` tối thiểu thu hút sự chỉ trích từ thành viên công đoàn)
 compensate(v - ˈkɑːmpənseɪt)bồi thường|the company will compensate the workers
 impair(v - ɪmˈper)làm suy yếu|the injury impaired his ability to walk
 running out of time(hết thời gian)|we are running out of time
 praise(v - preɪz)khen ngợi|he praised the team for their hard work
-equip(v - ɪˈkwɪp)trang bị|each room must be equipped with hot and cold running water
+equip(v - ɪˈkwɪp)lắp đặt, trang bị|each room must be equipped with hot and cold running water
 eating establishment(n - ˈiːtɪŋ ɪˈstæblɪʃmənt)cơ sở ăn uống|the eating establishment was very clean
 certify(v - ˈsɜːrtɪfaɪ)chứng nhận|he is a certified electrician
-failure to fully complete a permit application may incur a fee(việc không hoàn thành đầy đủ đơn xin cấp phép có thể phải chịu phí)
+`failure` to fully complete a permit application may incur a fee: `không` hoàn thành đầy đủ đơn xin cấp phép có thể phải chịu phí
 submit plans for a restaurant when applying(nộp bản vẽ cho nhà hàng khi nộp đơn)
 assistant manager(n - əˈsɪstənt ˈmænɪdʒər)trợ lý giám đốc|the assistant manager was very helpful
 distribution center(n - ˌdɪstrɪˈbjuːʃn ˈsentər)trung tâm phân phối|the new distribution center is operational
-congratulations `are also due to` Robert Nolan: chúc mừng `cũng dành cho` Robert Nolan
 track(n - træk)đường ray|the train is on the track
 station(n - ˈsteɪʃn)nhà ga|meet me at the station
 consult(v - kənˈsʌlt)tham khảo ý kiến|consult your doctor before taking this medication
 qualification(n - ˌkwɑːlɪfɪˈkeɪʃn)bằng cấp|her qualifications are impressive
 maternity cover(n - məˈtɜːrnəti ˈkʌvər)thay thế việc nghỉ thai sản|she is on maternity cover
 take on(n - teɪk ɒn)nhận|he decided to take on the new project
-tailored(adj - ˈteɪlərd)thiết kế riêng|the suit was tailored perfectly
 would you? (bạn sẽ làm thế à)|you wouldn't do that, would you?
 opening(n - ˈəʊpənɪŋ)khai trương|the grand opening is next week
 special sneak preview(n - ˈspeʃl snik ˈpriːvjuː)buổi xem trước đặc biệt|we attended a special sneak preview of the movie
@@ -39,10 +37,9 @@ promotion(n - prəˈməʊʃn)chương trình khuyến mãi|the store is having a
 evening strolls along cobblestone streets, followed by intimate dinners in picturesque cafes(đi dạo buổi tối dọc theo các con phố lát đá cuội, tiếp theo là các buổi tối thân mật tại các quán cafe đẹp như tranh)
 patron(n - ˈpeɪtrən)khách quen|the patron visited the restaurant every week
 redeem(v - rɪˈdiːm)đổi|redeem your points for a reward
-yield(v - jiːld)mang lại|the investment yielded high returns
+yield(v - jiːld)mang lại|the investment yielded high returns 'lợi nhuận'
 dietitian(n - ˌdaɪəˈtɪʃn)chuyên gia dinh dưỡng|the dietitian gave great advice
 therapist(n - ˈθerəpɪst)nhà trị liệu|she is seeing a therapist
-contact medical personnel to fill in for those who are on leave at this time(liên hệ với nhân viên y tế để thay thế những người đang nghỉ)
 emerge(v - ɪˈmɜːrdʒ)xuất hiện|new details have emerged
 counterpart(n - ˈkaʊntərpɑːrt)đối tác|his counterpart in the other company
 best interest (phr - bɛst ˈɪntrəst): lợi ích tốt nhất | The decision was made in the best interest of the company.

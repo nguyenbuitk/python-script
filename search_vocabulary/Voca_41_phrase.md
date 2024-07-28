@@ -1,4 +1,4 @@
-2
+3
 he is `pushing up his sleeves`: ... `xắn tay áo`
 awnings (ˈɔːnɪŋ) extend from some of the storefronts: các mái hiên mở rộng từ mặt tiền nhà hàng
 a van is `turning into an alleyway`: chiếc xe van `rẽ vào ngõ hẹp`
@@ -20,14 +20,14 @@ The town was `inhabited` for over a century.: thị trấn `có người ở`
 They `put together == put` a tentative proposal: họ `đưa ra` đề xuất tạm thời 
 the building requires an adequate ventilation system: hệ thống thông gió đầy đủ
 he is expected to stay for at least a week: dự kiến sẽ ở
-i'd like to bring you `a word` about upcoming metting: Tôi muốn mang đến cho bạn `một vài lời` về cuộc họp sắp tới
-the number of paticipants `tripped in number` in last year: số lượng người tham gia `tăng gấp đôi` trong năm ngoái
+I'd like to bring you `a word` about upcoming metting: Tôi muốn mang đến cho bạn `một vài lời` về cuộc họp sắp tới
+the number of paticipants `trippled in number` in last year: số lượng người tham gia `tăng gấp ba` trong năm ngoái
 the animals are `house together` in a large enclosure: các loài động vật được `đặt chung` trong một chuồng lớn
 the event, `to which you are cordially invited`, will be held next week: `mà m được trân trọng mời tham dự`
 a ceremony we held `in her honor`: `để vinh danh cô ấy`
 `get off` at next stop: xuống tại ...
 we met `as agreed`: chúng ta gặp nhau `theo thỏa thuận`
-plase provice contact details `for two references`: thông tin liên lạc của `2 người giới thiệu`
+plase provide contact details `for two references`: thông tin liên lạc của `2 người giới thiệu`
 the exhibit is `on loan == borrowed` from other museum: mượn từ ...
 `to that end`, we are implementing new policies ...: `vì mục đích đó`, 
 after months of rumers following `a sharp drop` in sales and stock prices: sau nhiều tháng tin đồn về `việc giảm mạnh` trong doanh số bán hàng và giá cổ phiếu
@@ -40,3 +40,6 @@ I apologize for the request `on short notice`: Tôi xin lỗi vì yêu cầu `tr
 `Given` what we've learned about the event, however: tuy nhiên, `dựa trên` những gì chúng ta biết về sự kiện
 She sent an email `acknowledging` the receipt of the documents: xác nhận, thừa nhận
 The store displayed their new collection in cases and mannequins. tủ và ma nơ canh
+contact `medical personnel` to `fill in` for those who are on leave at this time: liên hệ với `nhân viên y tế` để `thay thế công việc` những người đang nghỉ
+I'm trying to `get hold of` Jane: cố gắng `liên lạc` với Jane
+in keeping with (phr - ɪn ˈkipɪŋ wɪð): phù hợp | The new policies are in keeping with the company's goals.

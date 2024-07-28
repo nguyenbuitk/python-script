@@ -1,5 +1,5 @@
 ## test 6th, map vưới phrase_08
-06
+10
 form of identification (n - fɔːrm əv aɪˌdentɪfɪˈkeɪʃn) hình thức nhận dạng | please provide a valid form of identification
 unhelpful (adj - ʌnˈhelpfəl) vô ích | his comments were unhelpful
 credit (n - ˈkrɛdɪt) tín nhiệm | she has earned credit for her hard work
@@ -19,7 +19,7 @@ cooperative (adj - koʊˈɒpərətɪv) hợp tác | they have a cooperative rela
 flavors (n - ˈfleɪvərz) hương vị | the dish has a variety of flavors
 catch on (phrasal verb - kætʃ ɒn) bắt kịp | the new trend is starting to catch on
 settle (v - ˈsetl) giải quyết | they settled their differences
-neighbourhood (n - ˈneɪbərˌhʊd) khu phố | the neighbourhood is very friendly
+neighbourhood (n - ˈneɪbərˌhʊd) khu phố, khu vực lân cận | the neighbourhood is very friendly
 employee badge (n - ɪmˈplɔɪi bædʒ) thẻ nhân viên | she wore 'đeo' her employee badge
 authorize (v - ˈɔːθəraɪz) ủy quyền | she authorized the payment
 vacancy (n - ˈveɪkənsi) tuyển dụng | there is a vacancy for a manager
@@ -69,3 +69,4 @@ advanced (adj - ədˈvænst) tiên tiến | working on advanced technology
 coat: áo khoác
 stairway: cầu thang
 noon: trưa
+resurface: cải tạo lại

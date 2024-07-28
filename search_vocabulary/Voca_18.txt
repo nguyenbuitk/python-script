@@ -72,7 +72,7 @@ considerable:đáng kể
 conclusive:quả quyết
 confuse:nhầm lẫn
 personal:cá nhân
-personnel:nhân sự
+personnel:nhân sự, nhân viên
 urgent:khẩn cấp
 reception:tiệc chiêu đãi, lễ tân
 dissect:giải phẫu

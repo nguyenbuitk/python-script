@@ -1,7 +1,7 @@
 15
 20
 dispersion(n - dɪˈspɜːrʒn)sự phân tán
-distribute(v - dɪˈstrɪbjuːt)phân phát, phân tán
+distribute(v - dɪˈstrɪbjuːt)phân phối, phân phát, phân tán
 shelter(n - ˈʃeltər)nơi ở
 predator(n - ˈpredətər)kẻ săn mồi
 prey(n - preɪ)con mồi
@@ -62,13 +62,13 @@ distant(adj - ˈdɪstənt)xa xôi
 wonder(n - ˈwʌndər)kỳ quan
 similar(adj - ˈsɪmələr)tương tự
 keystroke(n - ˈkiːstrəʊk)lần nhấn phím
-interest(n - ˈɪntrest)sở thích
+interest(n - ˈɪntrest)sở thích, lợi ích, lãi
 obtain(v - əbˈteɪn)lấy
 recipient(n - rɪˈsɪpiənt)người nhận
 feeling(n - ˈfiːlɪŋ)cảm xúc
 mankind(n - mænˈkaɪnd)nhân loại
 Confucius(n - empty)khổng tử
-rewarding(adj - rɪˈwɔːrdɪŋ)bổ ích
+rewarding(adj - rɪˈwɔːrdɪŋ)ý nghĩa, bổ ích
 hopelessly(adv - ˈhəʊpləsli)vô vọng
 voluntarily(adv - ˌvɑːlənˈterəli)tự nguyện
 hardship(n - ˈhɑːrdʃɪp)khó khăn

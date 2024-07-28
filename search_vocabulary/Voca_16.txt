@@ -45,7 +45,7 @@ extend(v - ɪkˈstend)đưa ra
 gradual(adj - ˈɡrædʒuəl)dần dần
 approximate(v - əˈprɑːksɪmət)gần đúng
 stream(n - striːm)suối
-failure(n - ˈfeɪljər)thất bại
+failure(n - ˈfeɪljər)thất bại, không
 nest(n - nest)tổ
 wallet(n - ˈwɑːlɪt)ví
 tough(adj - tʌf)khó khăn

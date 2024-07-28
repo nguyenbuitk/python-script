@@ -1,4 +1,4 @@
-04
+05
 I'm `leaning toward` Star Restaurant: `nghiêng về phía` nhà hàng Star
 the `least expensieve` lunch service: dịch vụ ăn trưa `rẻ nhất`
 the nineteenth-century painting gallery: phòng trưng bày tranh thế kỷ 19
@@ -28,3 +28,6 @@ Sure, I'll come back `then`: Chắc chắn rồi, `lúc đó` tôi sẽ quay l�
 practices (n - ˈpræktɪsɪz) hoạt động | the company's practices are under review
 everything in order before the three o'clock start time: mọi thứ được sắp xếp ổn thỏa trước thời gian bắt đầu là 3h
 a misplaced item: 1 món đồ bị thất lạc
+consult: tham khảo
+Not on such short notice. I'll drive: không phải trong thời gian ngắn như vậy
+You have reached customer service at Ocean Shipping: Bạn đã liên hệ với dịch vụ khách hàng tại Ocean Shipping

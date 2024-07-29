@@ -37,7 +37,7 @@ flat(n - flæt)phẳng
 postal(adj - ˈpəʊstl)bưu chính
 empty(v - ˈempti)làm trống
 generally(adv - ˈdʒenrəli)thường xuyên, nói chung, chung, thường
-particular(adj - pərˈtɪkjələr)đặc biệt
+particular(adj - pərˈtɪkjələr)đặc biệt, cụ thể
 enthusiasm(n - ɪnˈθuːziæzəm)nhiệt tình
 thoroughly(adv - ˈθɜːrəli)hoàn toàn, kỹ lưỡng
 negative(adj - ˈneɡətɪv)tiêu cực

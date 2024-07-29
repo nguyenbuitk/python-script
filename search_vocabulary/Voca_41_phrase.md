@@ -1,4 +1,4 @@
-3
+5
 he is `pushing up his sleeves`: ... `xắn tay áo`
 awnings (ˈɔːnɪŋ) extend from some of the storefronts: các mái hiên mở rộng từ mặt tiền nhà hàng
 a van is `turning into an alleyway`: chiếc xe van `rẽ vào ngõ hẹp`
@@ -14,7 +14,7 @@ our company `was contracted` to provide for ...: công ty `được thuê` để
 She has `a rewarding career`: ... `sự nghiệp ý nghĩa`
 we `release into the sewer`: chúng tôi `xả vào ống cống`
 The store introduced `new types of treats`: ... `loại thức ăn mới `
-`Now more than ever`, we need to support each other: bây giờ hơn bao giờ
+`Now more than ever`, we need to support each other: bây giờ hơn bao giờ hết
 We should `hold off` on making a decision until next week: hoãn lại
 The town was `inhabited` for over a century.: thị trấn `có người ở`
 They `put together == put` a tentative proposal: họ `đưa ra` đề xuất tạm thời 
@@ -43,3 +43,6 @@ The store displayed their new collection in cases and mannequins. tủ và ma n�
 contact `medical personnel` to `fill in` for those who are on leave at this time: liên hệ với `nhân viên y tế` để `thay thế công việc` những người đang nghỉ
 I'm trying to `get hold of` Jane: cố gắng `liên lạc` với Jane
 in keeping with (phr - ɪn ˈkipɪŋ wɪð): phù hợp | The new policies are in keeping with the company's goals.
+when prices spiked `sharply` before dropping: khi giá tăng `mạnh|đột biến` trước khi giảm
+
+These surveys have yet to be filled out: những khảo sát này vẫn chưa được hoàn thành

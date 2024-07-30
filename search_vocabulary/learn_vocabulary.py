@@ -1,12 +1,23 @@
 import random
 import re
 import unicodedata
-# answer 'n' for skip 
-# to do:
-#   vv print annotation
-#   vv check answer by vietnamese
-#   key event stroke when answer?
 
+'''
+to do:
+vv print annotation
+vv check answer by vietnamese
+draw desire follow of app? 
+  + when answer by vietnamese:  
+    press 'enter': skip. if you want to add previous word into wrong list, press 'w' 
+    press 'space', it mean we don't rememeber this word. This word will added into wrong list. 
+  + after done the list word and wrong word, automatically increase number of practice file 
+  + it has mainly 3 type of file (word, phrase, draft). Each type will proceed differently. 
+  + change commandline into 'python3 learn.py filename' instead of choose filename 
+  + after choose filename, it will display instead of current manner: 
+    you want answer by english or vietnamese: 
+    1. english 
+    2. vietnamese 
+'''
 def read_vocabulary(filename):
   vocabulary = []
   with open(filename, 'r', encoding='utf-8') as file:

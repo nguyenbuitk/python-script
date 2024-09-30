@@ -1,41 +1,39 @@
 from sshkeyboard import listen_keyboard, stop_listening
+import threading
 
-pressed_keys = []
+# Global flag and lock to control input and key handling
+i_key_pressed = False
+input_lock = threading.Lock()
 
 def press(key):
-    print(f"'{key}' pressed")
-    pressed_keys.append(key)
-    handle_key_press(key)
-    if key == 'esc':
-        stop_listening()
+    global i_key_pressed
+    with input_lock:
+        if key == 'space':
+            i_key_pressed = True
+            stop_listening()  # Stop listening to the keyboard after 'i' is pressed
+        else:
+            print(f"'{key}' pressed")
 
 def release(key):
-    print(f"'{key}' released")
+    with input_lock:
+        print(f"'{key}' released")
 
-def count_key_presses(key):
-    return pressed_keys.count(key)
+def listen_keys():
+    listen_keyboard(
+        on_press=press,
+        on_release=release,
+    )
 
-def print_pressed_keys():
-    print("Keys pressed during the session: ")
-    for key in pressed_keys:
-        print(key, end=' ')
-    print()
+# Run the keyboard listener in a separate thread
+listener_thread = threading.Thread(target=listen_keys)
+listener_thread.start()
 
-def handle_key_press(key):
-    # New function with if-else condition to handle different keys
-    if key == 'a':
-        print("You pressed 'a', which is the first letter of the alphabet.")
-    elif key == 'b':
-        print("You pressed 'b', which is the second letter of the alphabet.")
-    elif key.isdigit():
-        print(f"You pressed the number '{key}', which is a digit.")
-    else:
-        print(f"You pressed '{key}', which is another key.")
+# Wait for the listener thread to finish
+listener_thread.join()
 
-if __name__ == "__main__":
-    print("Press 'esc' to stop.")
-    listen_keyboard(on_press=press, on_release=release)
-    print_pressed_keys()
-    specific_key = input("Enter a key to count its presses: ")
-    count = count_key_presses(specific_key)
-    print(f"The key '{specific_key}' was pressed {count} times.")
+# Check if 'i' was pressed and then ask for input
+if i_key_pressed:
+    with input_lock:
+        user_input = input("Enter something: ")
+        print(f"User entered: {user_input}")
+

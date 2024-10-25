@@ -13,11 +13,11 @@ for index, todo in  enumerate(todos):
         todos.pop(index)
         functions.write_todos(todos)
         del st.session_state[todo]
-        st.experimental_rerun()
+        st.rerun()
 new_todo = st.text_input(label="", placeholder="Add new todo ... ")
 if st.button("Add"):
     todos.append(new_todo + "\n")
     functions.write_todos(todos)
-    st.experimental_rerun()
+    st.rerun()
 
 print("session_state", st.session_state)

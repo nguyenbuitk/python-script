@@ -7,3 +7,8 @@ print(squares)
 # Ex 2: Using with condition
 test2 = [x for x in range(20) if x % 20 == 0 and x % 3 == 0]
 print(test2)
+
+# Ex 3: Using list comprehensive for replace
+l = ['Hardik', 'Rohit', 'Rahul', 'Virat', 'Pant']
+l = ['Shardul' if name == 'Hardik' else name for name in l]
+print(l)

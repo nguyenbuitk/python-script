@@ -22,7 +22,6 @@ for filepath in filepaths:
     # Retrieve the column name
     columns = df.columns
     columns = [item.replace("_", " ").title() for item in columns]
-    print(columns)
     
     pdf.set_font(family="Times", size=10, style='B')
     pdf.set_text_color(80, 80, 80)

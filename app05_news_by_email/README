@@ -1,21 +1,58 @@
-# New by emails
+# Python Project: News Email Sender & NASA Image Viewer
 
-This folder contains three Python files:
+This project consists of multiple Python scripts with distinct functionalities, such as fetching the latest news articles and sending them via email, and displaying NASA's Astronomy Picture of the Day.
 
-## news_by_email
+## Requirements
 
-This file fetches news articles related to a specific topic using the NewsAPI. It then constructs an email message containing the titles, descriptions, and URLs of the top 20 articles, and sends it using the `send_mail` function from `send_mail.py`.
+- **Python 3.x**
+- **Libraries**:
+  - `requests`
+  - `smtplib` and `ssl` (for email sending)
+  - `streamlit` (for displaying content in a web app)
 
-## send_mail.py
+Install dependencies with:
+```bash
+pip install requests streamlit
+```
 
-This file contains a function `send_mail` that sends an email message using SMTP protocol. It requires a Gmail account's credentials for authentication.
+## Project Structure
 
-## nasa_api.py
+- **news_by_email.py**: Fetches the latest news articles for a specified topic and emails them.
+- **send_mail.py**: Handles sending emails using SMTP.
+- **nasa_api.py**: Downloads NASA's Astronomy Picture of the Day and displays it with a title and description using Streamlit.
 
-This file downloads and displays the Astronomy Picture of the Day (APOD) from NASA's API using Streamlit. It fetches the image URL and explanation from the API, downloads the image, and displays it along with its title and explanation using Streamlit.
+## Usage
 
-To run these scripts, make sure to install the required dependencies:
-- `requests`
-- `streamlit`
+### 1. Sending News via Email
+1. Open `news_by_email.py` and set the `topic` variable to your desired keyword.
+2. Ensure the API key for `newsapi.org` is set correctly.
+3. Run the script to fetch the latest news articles on the topic and send them to the specified email address.
+```bash
+python news_by_email.py
+```
 
-You can install them using pip:
+### 2. NASA Astronomy Picture of the Day
+1. Open `nasa_api.py`.
+2. Ensure the API key for NASA API is set correctly.
+3. Run the script to fetch and download NASA's Astronomy Picture of the Day.
+4. Launch Streamlit to display the content.
+```bash
+streamlit run nasa_api.py
+```
+
+## Configuration
+
+- **API Keys**:
+  - Replace the `api_key` variables in `news_by_email.py` and `nasa_api.py` with your own keys.
+- **Email Credentials**:
+  - Update `username` and `password` in `send_mail.py` with your email credentials.
+  
+> **Security Note**: Do not hard-code sensitive information like passwords or API keys in code. Use environment variables or a configuration file.
+
+## Example Output
+
+### News Email
+The email contains a list of articles with the title, description, and a link to read more.
+
+### NASA Astronomy Picture of the Day
+Displays the image along with a title and an explanation from NASA's APOD.

@@ -31,7 +31,7 @@ def all_data(station):
         result.append({"station": station,
                        "date": row["    DATE"],
                        "temperature": row['   TG']/10})
-    return result    
+    return result
     
 @app.route("/api/v1/yearly/<station>/<year>")
 def yearly(station, year):

@@ -6,7 +6,7 @@ import plotly.express as px
 from backend import filter_dataframe
 
 # Replace with your own OpenWeatherMap API key
-API_KEY = '1e4f358eb16a06a534c9fe3bd9d93ce7'
+API_KEY = '035cbc8aa2af3c9308c97298dae14158'
 CITY_NAME = 'Ho Chi Minh City'
 BASE_URL = 'http://api.openweathermap.org/data/2.5/forecast'
 
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     st.title("Weather Forecast for the Next Days")
     
     place = st.text_input("Place: ", "Ho Chi Minh City")
-    forecast_days = st.slider("Forcast Days", 1, 5, 5)
+    forecast_days = st.slider("Forcast Days", 1, 5, 15)
     data_type = st.selectbox("Select data to view", ["Temperature"])
     
     st.subheader(f"{data_type} for the next {forecast_days} days in {place}")

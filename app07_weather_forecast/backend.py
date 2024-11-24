@@ -18,11 +18,12 @@ def filter_dataframe(apikey, city_name, base_url, forecast_date):
 
     # Extract relevant data
     forecast_list = data['list']
+    print("forcast_list:", type(forecast_list))
     # return list time [3h, 6h, 9h, 12h, 15h, ...]
     # get forecast date <=> get last forecast_date*8 element
     dates = [item['dt_txt'] for item in forecast_list][:forecast_date*8]
     temperatures = [item['main']['temp'] for item in forecast_list][:forecast_date*8]
-    descriptions = [item['weather'][0]['description'] for item in forecast_list][:forecast_date*8]
+    descriptions = [item['weather'][0]['main'] for item in forecast_list][:forecast_date*8]
 
     # Create a DataFrame
     df = pd.DataFrame({

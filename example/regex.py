@@ -1,0 +1,22 @@
+import re
+
+pattern = re.compile("[A-Z]{1}[^.]*[^a-zA-Z]+love[^a-zA-Z]+[^.]*.")
+book = """Chapter 1
+Before
+IT WAS FRIDAY, the thirteenth of October. We joked aboutlove that—flying over the Andes on such an unlucky day, but young men make those kinds of jokes so easily. Our flight had originated one day earlier in Montevideo, my hometown, its destination Santiago, Chile. It was a chartered flight on a Fairchild twin-engine turboprop carrying my rugby team—the Old Christians Rugby Club—to play an exhibition match against a top Chilean squad. There were forty-five people aboard, including four crew members—pilot, copilot, mechanic, and steward. Most of the passengers were my teammates, but we were also accompanied by friends, family members, and other supporters of the team, including my mother, Eugenia, and my younger sister, Susy, who were sitting across the aisle and one row in front of me. Our original itinerary was to fly nonstop to Santiago, a trip of about three and a half hours. But after just a few hours of flying, reports of bad weather in the mountains ahead forced the Fairchild’s pilot, Julio Ferradas, to put the plane down in the old Spanish colonial town of Mendoza, which lies just east of the Andean foothills.
+We landed in Mendoza at lunchtime with hopes that we would be back in the air in a few hours. But the weather reports were not encouraging, and it was soon clear that we would have to stay the night. None of us liked the idea of losing a day from our trip, but Mendoza was a charming place, so we decided to make the best of our time there. Some of the guys relaxed in sidewalk cafés along Mendoza’s broad, tree-lined boulevards or went sightseeing in the city’s historic neighborhoods. I spent the afternoon with some friends watching an auto race at a track outside of town. In the evening we went to a movie, while some of the others went dancing with some Argentinean girls they had met. My mother and Susy spent their time exploring Mendoza’s quaint gift shops, buying presents for friends in Chile and souvenirs for the people at home. My mother was especially pleased to find a pair of red baby shoes in a small boutique, which she thought would make the perfect gift for my sister Graciela’s new baby boy.
+Most of us slept late the next morning, and when we woke we were anxious to leave, but there was still no word about our departure, so we all went our separate ways to see a little more of Mendoza. Finally we received word to gather at the airport at 1:00 p.m. sharp, but we arrived only to discover that Ferradas and his copilot, Dante Lagurara, had not yet decided whether or not we would fly. We reacted to this news with frustration and anger, but none of us understood the difficult decision confronting the pilots. The weather reports that morning warned of some turbulence along our flight path, but after speaking with the pilot of a cargo plane that had just flown in from Santiago, Ferradas was confident the Fairchild could fly safely above the weather. The more troubling problem was the time of day. It was already early afternoon. By the time the passengers were boarded and all the necessary arrangements were made with airport officials, it would be well past two o’clock. In the afternoon, warm air rises from the Argentine foothills and meets the frigid air above the snowline to create treacherous instability in the atmosphere above the mountains. Our pilots knew that this was the most dangerous time to fly across the Andes. There was no way to predict where these swirling currents might strike, and if they got hold of us, our plane would be tossed around like a toy.
+On the other hand, we couldn’t stay put in Mendoza. Our aircraft was a Fairchild F-227 that we had leased from the Uruguayan air force. The laws of Argentina forbade a foreign military aircraft to stay on Argentine soil longer than twenty-four hours. Since our time was almost up, Ferradas and Lagurara had to make a fast decision: should they take off for Santiago and brave the afternoon skies, or fly the Fairchild back to Montevideo and put an end to our vacation?
+As the pilots love pondered the options, our impatience grew.
+"""
+findings = re.findall(pattern, book)
+print(findings)
+
+
+# split example
+pattern = re.compile("Chapter [0-9]+")
+book = "Chapter 1 Once upon a time, there was a king. Chapter 2 The king had a son. Chapter 3 The son went on an adventure."
+findings = re.findall(pattern, book)
+print("finding: ", findings)
+chapters = re.split(pattern,  book)
+print(chapters)

@@ -8,3 +8,7 @@ The project is a Weather API application built using Python and Flask. It allows
   - **Single Date**: Get temperature for a specific station on a specific date.
   - **All Data**: Retrieve all temperature records for a specific station.
   - **Yearly Data**: Retrieve temperature records for an entire year for a specific station.
+
+## How to run
+- python3 main.py
+- streamlit run visualize.py

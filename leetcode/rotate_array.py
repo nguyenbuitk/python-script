@@ -7,19 +7,24 @@ class Solution(object):
     """
     
     padding = [1] * k
-    nums = padding + nums
+    new_nums = padding + nums
+    print(new_nums)
 
-    l, r = k - 1, len(nums) - 1
+    l, r = k - 1, len(new_nums) - 1
     for i in range(k):
-      nums[l], nums[r] = nums[r], nums[l]
+      new_nums[l], new_nums[r] = new_nums[r], new_nums[l]
       r -= 1
       l -= 1
 
-    nums = nums[0:-k]
-    print(nums)
+    new_nums = new_nums[0:-k]
+    print("new_nums ", new_nums)
+    for i in range(len(nums)):
+      nums[i] = new_nums[i]
 
 
 solution = Solution()
-solution.rotate([1,2,3,4,5,6,7],3)
+nums = [1,2,3,4,5,6,7]
+solution.rotate(nums,3)
+print(nums)
 #solution.rotate([99,-1,-100,3],3)
 

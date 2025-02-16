@@ -17,17 +17,18 @@ def inOrderTravese(root: TreeNode):
     inOrderTravese(root.left)
     print(root.val)
     inOrderTravese(root.right)
+    
 def preOrderTravese(root: TreeNode):
     if root == None: 
         return
     print(root.val)
-    inOrderTravese(root.left)
-    inOrderTravese(root.right)
+    preOrderTravese(root.left)
+    preOrderTravese(root.right)
 
 if __name__ == "__main__":
     root = TreeNode(1)
     root.left = TreeNode(2, TreeNode(4), TreeNode(5))
     root.right = TreeNode(3, TreeNode(6), TreeNode(7))
-    # preOrderTravese(root)
+    preOrderTravese(root)
     solution = Solution()
     print("maxDepth: ", solution.maxDepth(root))

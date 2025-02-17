@@ -13,6 +13,7 @@ class Solution:
         for u, v in edges:
             graph[u].append(v)
             graph[v].append(u)
+        print(graph)
 
         visited = set()
         
@@ -29,5 +30,5 @@ class Solution:
         return dfs(source)
 
 solution = Solution()
-print(solution.validPath(3, [[0,1],[1,2],[2,0]], 0,2))
+print(solution.validPath(5, [[0,1],[1,2],[2,3],[3,4]],0, 4))
             

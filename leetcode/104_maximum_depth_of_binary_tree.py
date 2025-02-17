@@ -6,9 +6,8 @@ class TreeNode:
 
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
-        res = 0 
         if root == None:
-            return res
+            return 0
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
     
 def inOrderTravese(root: TreeNode):

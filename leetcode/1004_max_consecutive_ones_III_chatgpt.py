@@ -7,6 +7,7 @@
 # 2. calculate the number of zeros in window, if it exceed k, move left to remove 0
 class Solution:
     def longestOnes(self, nums, k):
+        # count_zeros: number of zeros in window
         left, count_zeros, res =0, 0, 0
         
         for right in range(len(nums)):
@@ -14,7 +15,7 @@ class Solution:
                 count_zeros += 1
                 
             
-            # count_zeros >= k
+            # if 0 exceed k, shrink the window
             while count_zeros > k:
                 if nums[left] == 0:
                     count_zeros -= 1

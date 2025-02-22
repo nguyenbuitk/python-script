@@ -1,3 +1,4 @@
+*.html
 scripts/cfg/
 scripts/certs/
 scripts/dao/__pycache__/

@@ -1,6 +1,7 @@
 class Solution:
     def sortedArray(self, nums):
         n = len(nums)
+        print(nums)
         RightGreaterThan = [n]*len(nums)
         stack = []
         for i in range(n - 1, -1, -1):

@@ -17,6 +17,7 @@ print(person_with_job)
 # We can remove an element by creating new tuple excluding the element
 # Here, we remove the city by slicing the tuple
 person_without_city = (person[0], person[1]) + person_with_job[3:]
+# ('John', 30, 'Engineer')
 print(person_without_city)
 
 for item in person_with_job:

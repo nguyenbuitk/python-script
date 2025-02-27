@@ -1,4 +1,4 @@
-### **Medium**
+# **Medium**
 567. Permutation in String
 Given two strings `s1` and `s2`, return true if `s2` contains a permutation of `s1`, or false otherwise.
 
@@ -13,8 +13,7 @@ Example 2:
 Input: `s1 = "ab", s2 = "eidboaoo"`
 Output: false
  
-
-### **Approach: Sliding Window**
+# **Approach: Sliding Window**
 1. Calculate the frequency of character in `s1`
 2. Use another frequency counter for a sliding windows of length `len(s1)` in `s2`
 2. Use two pointers (`left` and `right`):

@@ -1,3 +1,4 @@
+# **Medium**
 713. Subarray Product Less Than K
 Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
 
@@ -13,7 +14,7 @@ Example 2:
 Input: nums = [1,2,3], k = 0
 Output: 0
 
-#### **Approach: Sliding Window (Two Pointers)**
+# **Approach: Sliding Window (Two Pointers)**
 We can efficiently solve this problem using a **sliding window** approach.
 
 1. **Use Two Pointers (`left` and `right`)**:

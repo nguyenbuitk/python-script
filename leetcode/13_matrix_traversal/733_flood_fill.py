@@ -12,13 +12,13 @@ class Solution:
             i, j = stack.pop()
             if images[i][j] == initial_val:
                 images[i][j] = color
-            if i - 1 >= 0 and images[i-1][j] == initial_val and [i-1,j] not in visited:
+            if i - 1 >= 0 and images[i-1][j] == initial_val:
                 stack.append([i-1,j])
-            if i + 1 < rows and images[i+1][j] == initial_val and [i+1,j] not in visited:
+            if i + 1 < rows and images[i+1][j] == initial_val:
                 stack.append([i+1,j])
-            if j - 1 >= 0 and images[i][j-1] == initial_val and [i,j-1] not in visited:
+            if j - 1 >= 0 and images[i][j-1] == initial_val:
                 stack.append([i,j-1])
-            if j + 1 < cols and images[i][j+1] == initial_val and [i,j + 1] not in visited:
+            if j + 1 < cols and images[i][j+1] == initial_val:
                 stack.append([i,j+1])
             visited.append([i,j])
             

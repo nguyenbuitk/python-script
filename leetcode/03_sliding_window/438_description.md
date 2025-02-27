@@ -1,4 +1,4 @@
-### **Medium**
+# **Medium**
 438. Find All Anagrams in a String
 Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
 *Trả về array chứa tất cả các index bắt đầu của các hoán vị p chứa trong s*
@@ -17,7 +17,8 @@ The substring with start index = 0 is "ab", which is an anagram of "ab".
 The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 
-### **Approach: Sliding Window**
+# **Key Idea**
+**Approach: Sliding Window**
 1. Calculate the frequency of character in `p`
 2. Use another frequency counter for a sliding windows of length `len(p)` in `s`
 3. Use two pointers (`left` and `right`):

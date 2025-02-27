@@ -1,3 +1,4 @@
+# **Medium**
 1004. Max Consecutive Ones III
 Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 
@@ -13,7 +14,7 @@ Output: 10
 Explanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]
 Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 
-### Idea
+# **Approach Sliding Window**
 1. Use two pointers (left and right) to represent a windows
 - right expands the windows by iterating through the array
 - left shrinks the window if the number of 0 exceeds k

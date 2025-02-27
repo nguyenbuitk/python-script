@@ -1,3 +1,4 @@
+# Medium
 ### **Problem Statement**
 Given a string `s` and an integer `k`, you can replace **at most** `k` characters in `s` with any other uppercase English character.  
 Return the **length of the longest substring** that contains the **same letter** after performing the allowed operations.
@@ -26,17 +27,14 @@ The longest substring is `"BBBB"`, which has length `4`.
 Other possible answers also exist.
 
 
+# **Key Idea**
+**Approach: Sliding Window (Two Pointers)**
 
-### **Approach: Sliding Window (Two Pointers)**
-
-#### **1. Use Two Pointers (`left` and `right`)**
-- The `right` pointer expands the window to include new elements.
-- The `left` pointer shrink the window when more than `k` replacements are needed.
-
-#### **2. Adjust the window**
-
-- If more than `k` replacements are needed (`(right - left + 1) - max_freq > k`), shrink the window by moving `left` to the right.
-- Reduce the frequency count of the leftmost character while shrinking the window.
-
-#### **3. Track the Maximum Substring Length**
-- The valid substring length is `(right - left + 1)`, and we update the `max_length` accordingly.
+1. **Use Two Pointers (`left` and `right`)**
+    - The `right` pointer expands the window to include new elements.
+    - The `left` pointer shrink the window when more than `k` replacements are needed.
+2. **Adjust the window**
+    - If more than `k` replacements are needed (`(right - left + 1) - max_freq > k`), shrink the window by moving `left` to the right.
+    - Reduce the frequency count of the leftmost character while shrinking the window.
+3. **Track the Maximum Substring Length**
+    - The valid substring length is `(right - left + 1)`, and we update the `max_length` accordingly.

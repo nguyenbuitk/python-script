@@ -1,9 +1,8 @@
 def spiral_dfs(matrix):
     rows, cols = len(matrix), len(matrix[0])
-    row, col = 0, 0
+    row, col = 0, 0 # start position
     directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-    visited = set()
-    res = []
+    visited, res = set(), []
     visited.add((row, col))
     res.append(matrix[row][col])
     
@@ -14,5 +13,7 @@ def spiral_dfs(matrix):
                 visited.add((new_row, new_col))
                 res.append(matrix[new_row][new_col])
                 new_row, new_col = new_row + dr, new_col + dc
+
+            # chagne direction
             row, col = new_row - dr, new_col - dc
     return res

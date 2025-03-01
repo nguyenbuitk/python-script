@@ -1,12 +1,11 @@
-matrix = [
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15]
-]
+directions = [1,2,3,4]
 
-# Remove last 2 columns using slicing
-matrix = [row[:-2] for row in matrix]
-
-# Print result
-for row in matrix:
-    print(row)
+while True:
+    found_five = False
+    for a in directions:
+        if a == 5:
+            found_five = True
+            break
+    
+    if not found_five:
+        break

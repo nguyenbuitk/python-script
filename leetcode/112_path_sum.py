@@ -12,7 +12,8 @@ class Solution:
             if not node:
                 return 0
             left = dfs(node.left, target - node.val)
-            if left: return True
+            if left: 
+                return True
             right = dfs(node.right, target - node.val)
             return left or right
         return dfs(root, targetSum)
@@ -33,14 +34,15 @@ dfs(5, 22):
             left = dfs(7,2) = 0
                 left = dfs(None, -5) = 0
                 right = dfs(None, -5) = 0
+                return False
             right = dfs(2,2) = 1
                 return True
-            return left or right =1
+            return left or right = True
         right = dfs(None, 13) = 0
             return 0
         return 1
     right = dfs(8, 17)
-
+    return True
 
         1
        / 

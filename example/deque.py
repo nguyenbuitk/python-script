@@ -6,4 +6,3 @@ print(dq)
 dq.append(2)
 
 print(dq)
-

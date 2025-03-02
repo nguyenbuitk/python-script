@@ -14,6 +14,7 @@ print(person["age"])
 
 ## Adding dictionary elements
 person["job"] = "Engineer"
+person[0] = "abc"
 print(person)
 
 ## Remove key-value pair

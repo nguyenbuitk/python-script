@@ -1,6 +1,0 @@
-watch solution #75 leetcode
-watch solution 3 sum leetcode
-prefix sum:
-  #560 medium
-sliding windows
-  #643: easy

@@ -84,6 +84,9 @@ def binaryTreePathDFS(root: TreeNode):
 
 # DFS in 2D matrix
 # DFS to find all connected 'O' cells
+directions = [(1,0), (-1,0), (0,1), (0,-1)]
+rows, cols = 4, 4
+board = []
 def dfs(i, j, k, visitedLand):
     visitedLand[k].add((i,j))   # Mark the cell as visited in the current region
     for dr, dc in directions:

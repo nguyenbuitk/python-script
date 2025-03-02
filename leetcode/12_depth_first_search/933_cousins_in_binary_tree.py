@@ -28,8 +28,6 @@ def getDepth2(root, val):
     return dfs(root,0)
     
 def isCousins(root: TreeNode, x, y):
-    
-    
     res = []
     def dfs(node, parent, depth):
         if not node: 

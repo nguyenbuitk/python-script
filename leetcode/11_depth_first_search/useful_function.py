@@ -101,6 +101,19 @@ def dfs_method2(board, i, j):
     board[i][j] = '#'
     for dr, dc in [(1,0), (-1,0), (0, -1), (0, 1)]:
         dfs_method2(i+dr, j + dc)
+
+def dfs(i, j):
+    if i < 0 or i >= rows or j < 0 or j >= cols or board[i][j] != "1":
+        return
+    temp = board[i][j]
+    board[i][j] = "#"
+    # some case can using 1 in 2 method
+    # res = dfs(i + 1, j) or dfs(i -1, j) or dfs(i, j-1) or dfs(i, j+1)
+    for di, dj in [(0,1), (0, -1), (1,0), (-1,0)]:
+        dfs(i + di, j + dj)
+    board[i][j] = temp
+    
+
 root = TreeNode(3)
 root.left = TreeNode(4, TreeNode(1), TreeNode(2))
 root.right = TreeNode(5)

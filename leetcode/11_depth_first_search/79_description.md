@@ -8,7 +8,7 @@ Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "
 Output: true
 
 # Key Idea
-## Approach 1. Stack-based DFS with debugging
+## Approach 1. DFS - Stack-based
 1. Iterate over every cell in the matrix
 2. For each matching starting cell (`board[i][j] == word[0]`)
     - Initialize a `stack` to simulate DFS
@@ -17,6 +17,29 @@ Output: true
     - Push valid moves to the stack
     - If `word[k]` is found in sequence, continue
     - If the path is valid, `backtrack` (pop the stack, remove from `visited`, decrement `k`)
+
+### **Example Input:**
+We will step through the **stack-based DFS approach** using the test case:
+
+```plaintext
+Board:
+C  A  A
+A  A  A
+B  C  D
+```
+**Word:** `"AAB"`
+
+🔹 **We start from (1,1) → 'A'**  
+## **🔹 Summary of Moves**
+A stand for position of A\
+mR, mL, mU, mD stand for moveRight, moveUP, ...
+| Step | Position `(row, col)` | Stack State | Visited Nodes | Next Move |
+|------|----------------|------------|--------------|------------|
+| 1️⃣ | `(1,1 - A)` | `[((A), [])]` | `{}` | Move to `(A-right)` |
+| 2️⃣ | `(1,2 - A-right)` | `[((A), [mR]), ((A-right), [])]` | `{(A), (A-right)}` | No valid moves → Backtrack: stack.pop() visited.remove((m,n)) (m,n is A-right)  |
+| 3️⃣ | `(1,1 - A)` | `[((A), [mR])]` | `{(A)}` | Move to `(A-left)` |
+| 4️⃣ | `(0,1 - A-left)` | `[((A), [mR, mD]), ((A-left), [])]` | `{(A), (A-left)}` | Move to `(B)` |
+| 5️⃣ | `(0,2 - B)` | `[((A), [mR, mD]), ((A-left), [mD]), ((B), [])]` | `{A, A-left, B}` | word = "AAB" -> return True |
 
 ## Approach 2. Optimized DFS with backtracking
 1. DFS with backtracking:
@@ -51,7 +74,7 @@ A D E E
 - Current letter: `'A'`
 - Match found (`board[0][0] == 'A'`).
 - Mark **(0,0) as visited**.
-- Move to the **next character `'B'`**.
+- Move right `dr, dc = 0, 1` to the **next character `'B'`**.
 
 #### **Exploring Directions from (0,0):**
 ✅ Move **right** `(0,1) → 'B'` → Matches! Continue.  
@@ -61,7 +84,7 @@ A D E E
 - Current letter: `'B'`
 - Match found (`board[0][1] == 'B'`).
 - Mark **(0,1) as visited**.
-- Move to the **next character `'C'`**.
+- Move right `dr, dc = 0, 1` the **next character `'C'`**.
 
 #### **Exploring Directions from (0,1):**
 ✅ Move **right** `(0,2) → 'C'` → Matches! Continue.
@@ -86,7 +109,7 @@ A D E E
 
 ### **Step 4: Backtrack to (0,1)**
 - Unmark **(0,2) from visited**.
-- Try other directions from `(dr, dc) = (0,1)`.
+- Try other directions from **move right** `(dr, dc) = (0,1)` (move down, move left)
 
 #### **Exploring Other Directions from (0,1):**
 - Move **down** `(1,1) → 'F'` ❌ No match.
@@ -98,7 +121,7 @@ A D E E
 
 ### **Step 5: Backtrack to (0,0)**
 - Unmark **(0,1) from visited**.
-- Try other directions from `(dr, dc) = (0,0)`.
+- Try other directions from **move right** `(dr, dc) = (0,1)`. (move down)
 
 #### **Exploring Other Directions from (0,0):**
 - Move **down** `(1,0) → 'S'` ❌ No match.

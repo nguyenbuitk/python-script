@@ -19,11 +19,13 @@ class Solution:
                 if board[m][n] == word[k]:
                     print("===================")
                     print(f"Start position: board[{m}][{n}] = {board[m][n]}")
+
                     if k == len(word) - 1:
                         return True
+                    # Track visited cells to prevent reusing the same letter
                     visited = set()
                     
-                    # stack for DFS: (position, path taken)
+                    # Start DFS here, stack for DFS: (position, path taken)
                     stack = [((m,n), [])]
                     while stack:
                         # print(stack)
@@ -42,10 +44,11 @@ class Solution:
                                 
                                 # Move to next character in word
                                 k += 1
-                                print(f"Next position: board[{new_row}][{new_col}] = {board[new_row][new_col]}")
-                                print("")
-                                stack[-1][1].append((dr, dc))
-                                stack.append(((new_row, new_col), []))
+                                # print(f"Next position: board[{new_row}][{new_col}] = {board[new_row][new_col]}")
+                                # print("")
+                                
+                                stack[-1][1].append((dr, dc))           # add direction to current path
+                                stack.append(((new_row, new_col), []))  # move to next character
                                 visited.add((new_row, new_col))
                                 print(f"Visited: ", visited)
                                 if k == len(word) - 1:
@@ -56,6 +59,7 @@ class Solution:
                                 n = new_col
                                 found_next_word = True
                                 break
+                            
                         # If no next valid character found, backtrack
                         if not found_next_word:
                             stack.pop()             # remove last position from stack

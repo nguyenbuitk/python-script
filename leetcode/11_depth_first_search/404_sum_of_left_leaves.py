@@ -7,13 +7,13 @@ class TreeNode:
         self.right = right
         
 def sumOfLeftLeaves(root):
-    def dfs(node, parent):
+    def dfs(node, isLeft):
         if not node:
             return 0
-        if not node.left and not node.right and parent and parent.left == node:
+        if isLeft and not node.left and not node.right:
             return node.val
-        return dfs(node.left, node) + dfs(node.right, node)
-    return dfs(root, None)
+        return dfs(node.left, True) + dfs(node.right, False)
+    return dfs(root, False)
 
 root = TreeNode(3)
 root.left = TreeNode(4)

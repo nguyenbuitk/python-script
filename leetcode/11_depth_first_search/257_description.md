@@ -11,6 +11,7 @@ Output: ["1->2->5","1->3"]
 ## Approach 1 - DFS
 1. Base Case: If node is `None`, return
 2. Recursive Case:
+    - dfs(node, path)
     - Append the current node value to path
     - If the node is a leaf, add the path to result
     - If the node has left/right chilred, recurse on the mwith the updated path

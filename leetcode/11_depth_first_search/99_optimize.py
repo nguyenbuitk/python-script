@@ -13,7 +13,7 @@ def recoverTree(root: TreeNode):
             stack.append(current_node)
             current_node = current_node.left
         current_node = stack.pop()
-        if current_node.val <= preVal:
+        if preNode == None or  current_node.val <= preVal:
             if not firstNode:
                 firstNode = preNode
                 secondNode = current_node

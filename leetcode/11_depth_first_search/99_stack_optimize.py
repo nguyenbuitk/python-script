@@ -6,28 +6,25 @@ class TreeNode:
         self.right = right
 
 def recoverTree(root: TreeNode):
-    current_node, stack, preVal = root,  [], float('-inf')
+    stack = []
     preNode, firstNode, secondNode = None, None, None
+    current_node = root
     while current_node or stack:
         while current_node:
             stack.append(current_node)
             current_node = current_node.left
+        
         current_node = stack.pop()
-        if preNode == None or  current_node.val <= preVal:
+        if preNode and current_node.val <= preNode.val:
             if not firstNode:
                 firstNode = preNode
-                secondNode = current_node
-            else:
-                secondNode = current_node
-                break
-
-        preVal = current_node.val
+            secondNode = current_node
+        
         preNode = current_node
         current_node = current_node.right
-    temp = firstNode.val
-    firstNode.val = secondNode.val
-    secondNode.val = temp
 
+    firstNode.val, secondNode.val = secondNode.val, firstNode.val
+    
 #root = TreeNode(32)
 #root.left = TreeNode(26)
 #root.right = TreeNode(22)

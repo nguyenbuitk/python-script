@@ -17,7 +17,3 @@ def eraseOverlapIntervals(intervals: List[List[int]]) -> int:
     return count 
     
 eraseOverlapIntervals( [[-52,31],[-73,-26],[82,97],[-65,-11],[-62,-49],[95,99],[58,95],[-31,49],[66,98],[-63,2],[30,47],[-40,-26]])
-            
-
-    
-    

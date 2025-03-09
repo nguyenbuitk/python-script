@@ -1,13 +1,19 @@
-def findTarget(res, target):
-    l, r = 0, len(res) - 1
-    while l <= r:
-        mid2 = (l+r)//2
-        print(f"mid2 = res[{mid2}] = {res[mid2]}, l = res[{l}] = {res[l]}, r = res[{r}] = {res[r]}", end = "\n\n")
-        if res[mid2] == target:
-            break
-        elif res[mid2] < target:
-            l = mid2 + 1
-        else:
-            r = mid2 - 1
-    print(f"end: mid2_index = {mid2}, mid2 = {res[mid2]}")
-findTarget([1,2,4,5,6,7,8], 3)
+def find_max_smaller_right(nums):
+    n = len(nums)
+    result = [None] * n  # Khởi tạo danh sách kết quả với giá trị None
+    stack = []  # Stack để lưu các chỉ số của phần tử đã duyệt
+    
+    for i in range(n - 1, -1, -1):
+        while stack and nums[stack[-1]] >= nums[i]:
+            stack.pop()
+        
+        if stack:
+            result[i] = max(nums[j] for j in stack if nums[j] < nums[i])
+        
+        stack.append(i)
+    
+    return result
+
+# Test
+nums = [3, 5, 0, 3, 4]
+print(find_max_smaller_right(nums))  # Output: [0, 4, None, None, None]

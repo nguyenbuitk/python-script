@@ -10,29 +10,24 @@ Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
 
 # Key Idea
-## **2️⃣ Algorithm (Modified Binary Search)**
-### **Step 1: Initialize Search Bounds**
-- Set `left = 0`, `right = len(nums) - 1`.
-
-### **Step 2: Perform Binary Search**
-- While `left <= right`:
-  1. Compute **midpoint**:  
-     ```python
-     mid = (left + right) // 2
-     ```
-  2. **Check if `nums[mid] == target`** → If found, return `mid`.
-  3. **Determine which half is sorted**:
-     - If `nums[left] ≤ nums[mid]` → Left half is sorted.
-     - Else, the **right half is sorted**.
-  4. **Decide where to search next**:
-     - If the **left half is sorted**:
-       - Check if `target` is within `nums[left] → nums[mid]`.
-       - If yes → Move `right` to `mid - 1`.
-       - Else → Move `left` to `mid + 1`.
-     - If the **right half is sorted**:
-       - Check if `target` is within `nums[mid] → nums[right]`.
-       - If yes → Move `left` to `mid + 1`.
-       - Else → Move `right` to `mid - 1`.
+## Approach 1: Modified Binary Search
+1. **Check if `nums[mid] == target`** → If found, return `mid`.
+2. **Determine which half is sorted**:
+   - If `nums[left] ≤ nums[mid]` → Left half is sorted.
+   - Else, the **right half is sorted**.
+3. **Decide where to search next**:
+   - If the **left half is sorted**:
+      - Check if `target` is within `nums[left] → nums[mid]`.
+      - If yes → Move `right` to `mid - 1`.
+      - Else → Move `left` to `mid + 1`.
+   - Do similar if right haft is sorted
 
 ### **Step 3: If Target is Not Found**
 - Return `-1`.
+
+## Approach 2: Self
+1. Use binary search to locate the pivot.
+2. Transform the array into a sorted array.
+   - If no rotation is found, the array remains unchanged
+   - If a pivot is found, construct a new array starting from the pivot to create sorted array
+3. Search for the target using Binary Search

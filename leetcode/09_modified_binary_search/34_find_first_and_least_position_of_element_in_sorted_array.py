@@ -19,12 +19,17 @@ def searchRange(nums: List[int], target: int) -> List[int]:
             min_pos = mid
             max_pos = mid
             print(f"mid: {mid}")
+            
+            # Linear scan to find the first position
             for i in range(mid - 1, -1, -1):
                 if nums[i] == target:
                     min_pos = min(i, min_pos)
+                    
+            # Linear scan to find the last position
             for i in range(mid+1, len(nums)):
                 if nums[i] == target:
                     max_pos = max(i, max_pos)
+                
             return [min_pos, max_pos]
         elif nums[mid] > target:
             right = mid - 1
@@ -32,6 +37,5 @@ def searchRange(nums: List[int], target: int) -> List[int]:
             left = mid + 1
     return [-1, -1]
 
-print("############ Test 1 ############")
 # print(searchRange([5,7,7,8,8,10], target = 6))
 print(searchRange([2,2], target = 2))

@@ -12,12 +12,15 @@ def search(nums: list[int], target: int) -> int:
             r = mid
         else:
             break
+    
+    # Check if the array is not rotated (nums[mid] is smaller than its next element)
     print(f"mid 1: {mid}")
     if nums[mid] < nums[mid+1]:
         res = nums.copy()
         offset = 0
     else: res = nums[mid+1:] + nums[:mid+1]
     
+    # Steps 2: Perform bianry search on adjusted array
     l, r = 0, len(res) - 1
     while l <= r:
         mid2 = (l+r)//2
@@ -28,12 +31,17 @@ def search(nums: list[int], target: int) -> int:
         else:
             r = mid2 - 1
 
+    # Step 3: If target is not found, return -1, else return the original index
     print(f"mid 2: {mid2}")
     if res[mid2] != target:
         return -1
     else:
-        if offset != 0: offset = len(nums)  - mid -1
+        # If the array was not rotated, offset remains 0
+        if offset != 0: 
+            offset = len(nums)  - mid -1 # Compute pivot offset
         print(f"offset :{offset}")
+        
+        # Compute the original index 
         if mid2 >= offset:
             return mid2 - offset
         else: return mid2 + mid + 1

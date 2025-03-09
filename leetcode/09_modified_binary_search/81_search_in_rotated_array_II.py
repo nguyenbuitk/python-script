@@ -11,16 +11,16 @@ def search(nums: List[int], target: int) -> bool:
     left, right = 0, len(nums) - 1
     while left <= right:
         mid = (left + right) // 2
+        
         print(f"Left: {left} ({nums[left]}), Mid: {mid} ({nums[mid]}), Right: {right} ({nums[right]})")
 
         if nums[mid] == target:
             return True
-        print(f"nums[left] = {nums[left]}")
-        print(f"nums[mid] = {nums[mid]}")
-        print(f"min(nums[left:mid+1])= {min(nums[left:mid+1])}")
-        print(f"max(nums[left:mid+1])= {max(nums[left:mid+1])}")
-        print(f"min(nums[mid:right+1]) = {min(nums[mid:right+1])}")
-        print(f"max(nums[mid:right+1]) = {max(nums[mid:right+1])}")
+        # When duplicate, we have 2 case to determine which haft is sorted
+        # for ex:   5 5 5 5 5 5(mid) 5 1 2 3 4 5
+        #           5 6 7 8 9 5(mid) 5 5 5 5 5 5
+        # When left haft is consist of all identical value -> the left haft is sorted
+        # Determine if the left haft is sorted OR if it consists of all identical values
         if nums[left] < nums[mid] or (nums[left] == nums[mid] and min(nums[left:mid+1]) == nums[mid] and max(nums[left:mid+1]) == nums[mid]):
             print("The left haft is sorted")
             if nums[left] <= target < nums[mid]:
@@ -30,6 +30,8 @@ def search(nums: List[int], target: int) -> bool:
             else: 
                 left = mid + 1
                 print(f"Target {target} is not in sorted part. Moving left pointer to {mid + 1}")
+        
+        # Otherwise, determine if the right haft is sorted or if it consist of all identical value
         elif nums[left] > nums[mid] or (nums[left] == nums[mid] and min(nums[mid:right+1]) == nums[mid] and max(nums[mid:right+1]) == nums[mid]):
             print("The right haft is sorted")
             # Check if the target is in the sorted haft
@@ -39,8 +41,6 @@ def search(nums: List[int], target: int) -> bool:
             else:
                 print(f"Target {target} is not in sorted part. Moving right pointer to {mid-1}")
                 right = mid - 1
-
-        time.sleep(0.5)
     return False
 # print(search([4,5,6,7,8,-2,-1,0,1,2,3,3,3], 0))
 print(search([1,0,1,1,1],0))

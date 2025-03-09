@@ -7,10 +7,12 @@ def findMin(nums: List[int]) -> int:
         mid = (left + right) // 2
         res = min(res, nums[mid])
         print(f"Left: {left} ({nums[left]}), Mid: {mid} ({nums[mid]}), Right: {right} ({nums[right]})")
+        
         if nums[left] == nums[mid] == nums[right]:
             left += 1
             right -= 1
             continue
+        
         if nums[left] <= nums[mid]:
             print("Left haft is sorted")
             res = min(res, nums[left])

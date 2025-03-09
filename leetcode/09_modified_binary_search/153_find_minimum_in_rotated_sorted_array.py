@@ -11,7 +11,6 @@ def findMin(nums: List[int]) -> int:
     print(f"Indexes:{indexes_str}")
     print(f"Nums:   {nums_str}")
 
-    
     left, right = 0, len(nums) - 1
     res = float('inf')
     while left <= right:
@@ -19,10 +18,13 @@ def findMin(nums: List[int]) -> int:
         print(f"Left: {left} ({nums[left]}), Mid: {mid} ({nums[mid]}), Right: {right} ({nums[right]})")
 
         res = min(res, nums[mid])
-
+        
+        # Determine which haft is sorted, after that, we can find the minimum value of the sorted haft easily
         if nums[left] <= nums[mid]:
             print("the left haft is sorted")
             res = min(res, nums[left])
+            
+            # Move pointer to the remaining part to continue find
             left = mid + 1
         else:
             print("the right haft is sorted")

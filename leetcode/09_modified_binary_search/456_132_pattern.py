@@ -1,43 +1,45 @@
 from typing import List
 
 def find132pattern(nums: List[int]) -> bool:
-    # closest smaller in left:
-    # smaller and smallest in left
-    # Tạo danh sách index
-    indexes = list(range(len(nums)))
-    
-    # In list số theo hàng thẳng
-    nums_str = " ".join(str(num).rjust(3) for num in nums)
-    indexes_str = " ".join(str(i).rjust(3) for i in indexes)
-
-    print(f"Indexes:{indexes_str}")
-    print(f"Nums:   {nums_str}")
-    leftClosestSmaller = [None]*len(nums)
+    # Step 1: Find the smallest element to the left for each element
+    leftSmallest = [None]*len(nums)
     stack = []
     for i in range(len(nums)):
         print(f"i: {i}, Stack before pop: {stack}")
+        
+        # Maintain a monotonically increasing stack
         while stack and stack[-1] >= nums[i]:
             stack.pop()
+        
+        # Store the smallest element to the left
         if stack:
-            leftClosestSmaller[i] = stack[0]
+            leftSmallest[i] = stack[0]
+            
+        # Push current element onto the stack
         stack.append(nums[i])
         print(f"Stack after append: {stack}")
-    print(f"leftClosestSmaller: {leftClosestSmaller}")
-    
-    # biggest number in list right smaller
-    rightClosestSmaller = [None]*len(nums)
+    print(f"leftSmallest: {leftSmallest}")
+    # Step 2: Find the largest element in list right smaller
+    # biggest number in those right smaller
+    # with example [1,3,5,0,3,4]
+    # if 3 is 132 pattern => 5 is 132 pattern => just examine 5
+    rightSmaller = [None]*len(nums)
     stack = []
+    second = None
     for i in range(len(nums) - 1, -1, -1):
         print(f"i= {i}, Stack before pop: {stack}")
-        while stack and stack[-1] >= nums[i]:
-            stack.pop()
-        if stack:
-            rightClosestSmaller[i] = stack[-1]
+        while stack and stack[-1] < nums[i]:
+            second = stack.pop()
+        if second:
+            rightSmaller[i] = second
+            second = None
         stack.append(nums[i])
         print(f"Stack after append: {stack}")
-    print(f"rightClosestSmaller: {rightClosestSmaller}")
+    print(f"rightSmaller: {rightSmaller}")
+    
+    # Step 3: Check if there exists an index i where left < right, forming a 132 pattern
     for i in range(len(nums)):
-        if rightClosestSmaller[i] != None and leftClosestSmaller[i] != None and leftClosestSmaller[i] < rightClosestSmaller[i]:
+        if rightSmaller[i] != None and leftSmallest[i] != None and leftSmallest[i] < rightSmaller[i]:
             return True
     return False
 print(find132pattern([1,3,5,0,3,4]))

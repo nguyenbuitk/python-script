@@ -1,9 +1,7 @@
 from typing import List
 import time
 def search(nums: list[int], target: int) -> int:
-    # len_before = len(nums) - target
-    # res = nums[len_before:] + nums[:len_before]
-    # print(res)
+    # Step 1: find the pivot, mark it as mid
     l, r = 0, len(nums) - 1
     offset = None
     while l < r:
@@ -18,7 +16,7 @@ def search(nums: list[int], target: int) -> int:
     if nums[mid] < nums[mid+1]:
         res = nums.copy()
         offset = 0
-    else: res = nums[mid+1:] +nums[:mid+1]
+    else: res = nums[mid+1:] + nums[:mid+1]
     
     l, r = 0, len(res) - 1
     while l <= r:
